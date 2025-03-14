@@ -9,6 +9,14 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxt/ui'
-  ]
+    '@nuxt/ui',
+    '@nuxtjs/tailwindcss'
+  ],
+  
+  tailwindcss: {
+    // Options for @nuxtjs/tailwindcss module
+    configPath: '~/tailwind.config.js',
+    exposeConfig: false,
+    viewer: true,
+  }
 })

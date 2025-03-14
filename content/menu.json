@@ -1,0 +1,36 @@
+{
+  "title": "Our Menu",
+  "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
+  "pageHeader": {
+    "title": "Our Menu",
+    "subtitle": "Authentic Thai Cuisine",
+    "image": "/img/menu_header.png"
+  },
+  "categories": [
+    {
+      "name": "Appetizers",
+      "items": [
+        { "name": "Pad Thai", "price": 14.00 },
+        { "name": "Green Curry", "price": 16.50 },
+        { "name": "Chang Beer", "price": 46.00 },
+        { "name": "Thong Thong, Silver Bag (8 pieces)", "price": 146.00 },
+        { "name": "Pa Po", "price": 46.00 },
+        { "name": "Milk Tea", "price": 46.00 },
+        { "name": "Nam Sod", "price": 146.00 },
+        { "name": "Milk", "price": 4.50 },
+        { "name": "Silom", "price": 16.60 },
+        { "name": "Tom Yam", "price": 17.00 },
+        { "name": "Gai Yang (Grilled Chicken)", "price": 146.00, "description": "6 pieces" },
+        { "name": "Pad Mee Goong", "price": 16.50 },
+        { "name": "Khao Neow Ma Phuang (Sticky Rice)", "price": 134.00 },
+        { "name": "Pad Kra Pao Gai (Stir-Fried Chicken with Basil)", "price": 14.00 },
+        { "name": "Khao Pad (Fried Rice)", "price": 74.00 },
+        { "name": "Khao Pod Ma Fuad (Corn with Egg)", "price": 14.00 },
+        { "name": "Gai Tod Med Ma Ma", "price": 16.50 },
+        { "name": "Gai Huan (Sweet Chicken)", "price": 156.00 },
+        { "name": "Som Tam (Spicy Papaya Salad)", "price": 16.00 },
+        { "name": "Khao (Rice)", "price": 3.50 }
+      ]
+    }
+  ]
+} 

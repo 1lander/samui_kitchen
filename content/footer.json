@@ -1,0 +1,28 @@
+{
+  "brand": {
+    "name": "Samui Kitchen",
+    "tagline": "Bringing the authentic flavors of Thailand to your doorstep.",
+    "socialMedia": [
+      { "name": "Facebook", "shortName": "FB", "url": "#" },
+      { "name": "Instagram", "shortName": "IG", "url": "#" },
+      { "name": "Twitter", "shortName": "TW", "url": "#" }
+    ]
+  },
+  "hours": {
+    "title": "Opening Hours",
+    "schedule": [
+      "Monday - Friday: 11:00 AM - 10:00 PM",
+      "Saturday - Sunday: 12:00 PM - 11:00 PM"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "address": [
+      "Jezusstraat 40, 102",
+      "2000 Antwerpen"
+    ],
+    "phone": "+32 495 22 22 22",
+    "email": "info@samuikitchen.com"
+  },
+  "copyright": "All rights reserved."
+} 

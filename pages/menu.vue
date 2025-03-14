@@ -22,7 +22,7 @@ useSeoMeta({
         :alt="menu.pageHeader.title"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white">
+      <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
         <h1 class="text-4xl md:text-5xl font-bold mb-2">{{ menu.pageHeader.title }}</h1>
         <p class="text-xl md:text-2xl">{{ menu.pageHeader.subtitle }}</p>
       </div>
@@ -36,7 +36,7 @@ useSeoMeta({
     <!-- Menu Categories -->
     <div class="max-w-5xl mx-auto">
       <div v-for="(category, index) in menu.categories" :key="index" class="mb-12">
-        <h2 class="text-3xl font-bold mb-6 text-center border-b-2 border-amber-500 pb-2">
+        <h2 class="text-3xl font-bold mb-6 text-center border-b-2 border-pink-500 pb-2">
           {{ category.name }}
         </h2>
         
@@ -48,7 +48,7 @@ useSeoMeta({
           >
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-semibold">{{ item.name }}</h3>
-              <span class="text-lg font-medium text-amber-600">{{ item.price.toFixed(2) }} €</span>
+              <span class="text-lg font-medium text-pink-600">{{ item.price.toFixed(2) }} €</span>
             </div>
             <p v-if="item.description" class="text-gray-600 mt-1">{{ item.description }}</p>
           </div>

@@ -17,13 +17,17 @@ useSeoMeta({
   <div v-if="menu" class="container mx-auto px-4 py-12">
     <!-- Page Header -->
     <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
-      <img 
+      <img
         :src="menu.pageHeader.image"
         :alt="menu.pageHeader.title"
         class="w-full h-full object-cover"
       />
-      <div class="absolute inset-0 flex flex-col justify-center items-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">{{ menu.pageHeader.title }}</h1>
+      <div
+        class="absolute inset-0 flex flex-col justify-center items-center text-white"
+      >
+        <h1 class="text-4xl md:text-5xl font-bold mb-2">
+          {{ menu.pageHeader.title }}
+        </h1>
         <p class="text-xl md:text-2xl">{{ menu.pageHeader.subtitle }}</p>
       </div>
     </div>
@@ -35,28 +39,38 @@ useSeoMeta({
 
     <!-- Menu Categories -->
     <div class="max-w-5xl mx-auto">
-      <div v-for="(category, index) in menu.categories" :key="index" class="mb-12">
-        <h2 class="text-3xl font-bold mb-6 text-center border-b-2 border-pink-500 pb-2">
+      <div
+        v-for="(category, index) in menu.categories"
+        :key="index"
+        class="mb-12"
+      >
+        <h2
+          class="text-3xl font-bold mb-6 text-center border-b-2 border-pink-500 pb-2"
+        >
           {{ category.name }}
         </h2>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div 
-            v-for="(item, itemIndex) in category.items" 
+          <div
+            v-for="(item, itemIndex) in category.items"
             :key="itemIndex"
             class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
           >
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-semibold">{{ item.name }}</h3>
-              <span class="text-lg font-medium text-pink-600">{{ item.price.toFixed(2) }} €</span>
+              <span class="text-lg font-medium text-pink-600"
+                >{{ item.price.toFixed(2) }} €</span
+              >
             </div>
-            <p v-if="item.description" class="text-gray-600 mt-1">{{ item.description }}</p>
+            <p v-if="item.description" class="text-gray-600 mt-1">
+              {{ item.description }}
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <div v-else class="py-12 text-center">
     <p class="text-lg text-gray-600">Loading content...</p>
   </div>

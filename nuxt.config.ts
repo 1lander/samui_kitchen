@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/i18n',
   ],
   content: {
     build: {
@@ -20,4 +21,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  i18n: {
+    defaultLocale: 'en',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'nl', name: 'Nederlands', file: 'nl.json' },
+      { code: 'th', name: 'Thai', file: 'th.json' },
+    ]
+  }
 })

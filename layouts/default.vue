@@ -1,3 +1,7 @@
+<script setup>
+const { locales, setLocale } = useI18n()
+</script>
+
 <template>
   <div class="min-h-screen flex flex-col bg-pink-50">
     <!-- Header with pastel pink colors -->
@@ -14,8 +18,13 @@
               <li><NuxtLink to="/menu" class="hover:text-pink-600 transition">Menu</NuxtLink></li>
               <li><NuxtLink to="/about" class="hover:text-pink-600 transition">About Us</NuxtLink></li>
               <li><NuxtLink to="/contact" class="hover:text-pink-600 transition">Contact</NuxtLink></li>
-              <li><NuxtLink to="/order" class="bg-pink-400 hover:bg-pink-500 text-pink-900 px-4 py-2 rounded-lg transition">Order Now</NuxtLink></li>
             </ul>
+            <div>
+              <button v-for="locale in locales" :key="locale.code" @click="setLocale(locale.code)">
+                {{ locale.name }}
+              </button>
+              <h1>{{ $t('welcome') }}</h1>
+            </div>
           </nav>
           <!-- Mobile menu button -->
           <button class="md:hidden text-pink-900">

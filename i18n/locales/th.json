@@ -1,5 +1,10 @@
 {
-    "welcome": "ยินดีต้อนรับเข้าสู่ Samui Kitchen",
+    "header": {
+        "home": "หน้าแรก",
+        "menu": "เมนู",
+        "about": "เกี่ยวกับเรา",
+        "contact": "ติดต่อเรา"
+    },
     "menu": {
         "pageTitle": "เมนูของเรา",
         "pageSubtitle": "อาหารไทยแท้",

@@ -1,5 +1,10 @@
 {
-    "welcome": "Welkom bij Samui Kitchen",
+    "header": {
+        "home": "Home",
+        "menu": "Menu",
+        "about": "Over Ons",
+        "contact": "Contact"
+    },
     "menu": {
         "pageTitle": "Ons Menu",
         "pageSubtitle": "Authentieke Thaise Keuken",

@@ -58,9 +58,11 @@ useSeoMeta({
           >
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-semibold">{{ item.name }}</h3>
-              <span class="text-lg font-medium text-pink-600"
-                >{{ item.price.toFixed(2) }} €</span
-              >
+              <div class="text-right">
+                <span class="text-lg font-medium text-pink-600">
+                  € {{ item.price.toFixed(2) }}
+                </span>
+              </div>
             </div>
             <p v-if="item.description" class="text-gray-600 mt-1">
               {{ item.description }}

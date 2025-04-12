@@ -4,8 +4,7 @@
     "tagline": "Bringing the authentic flavors of Thailand to your doorstep.",
     "socialMedia": [
       { "name": "Facebook", "shortName": "FB", "url": "#" },
-      { "name": "Instagram", "shortName": "IG", "url": "#" },
-      { "name": "Twitter", "shortName": "TW", "url": "#" }
+      { "name": "Instagram", "shortName": "IG", "url": "#" }
     ]
   },
   "hours": {

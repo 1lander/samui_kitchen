@@ -8,28 +8,119 @@
   },
   "categories": [
     {
-      "name": "Appetizers",
+      "name": "Main Dishes",
       "items": [
-        { "name": "Pad Thai", "price": 14.00 },
-        { "name": "Green Curry", "price": 16.50 },
-        { "name": "Chang Beer", "price": 4.60 },
-        { "name": "Thong Thong, Silver Bag (8 pieces)", "price": 14.60 },
-        { "name": "Pa Po", "price": 4.60 },
-        { "name": "Milk Tea", "price": 4.60 },
-        { "name": "Nam Sod", "price": 14.60 },
-        { "name": "Milk", "price": 4.50 },
-        { "name": "Silom", "price": 16.60 },
-        { "name": "Tom Yam", "price": 17.00 },
-        { "name": "Gai Yang (Grilled Chicken)", "price": 14.60, "description": "6 pieces" },
-        { "name": "Pad Mee Goong", "price": 16.50 },
-        { "name": "Khao Neow Ma Phuang (Sticky Rice)", "price": 13.40 },
-        { "name": "Pad Kra Pao Gai (Stir-Fried Chicken with Basil)", "price": 14.00 },
-        { "name": "Khao Pad (Fried Rice)", "price": 7.40 },
-        { "name": "Khao Pod Ma Fuad (Corn with Egg)", "price": 14.00 },
-        { "name": "Gai Tod Med Ma Ma", "price": 16.50 },
-        { "name": "Gai Huan (Sweet Chicken)", "price": 15.60 },
-        { "name": "Som Tam (Spicy Papaya Salad)", "price": 16.00 },
-        { "name": "Khao (Rice)", "price": 3.50 }
+        { 
+          "name": "Pad Thai (chicken/shrimp)", 
+          "price": 14.00, 
+          "description": "Scallions, bean sprouts" 
+        },
+        { 
+          "name": "Green Curry (chicken/pork/beef)", 
+          "price": 15.00, 
+          "description": "Potatoes, broccoli, bell peppers" 
+        },
+        { 
+          "name": "Massaman Curry (chicken/pork/beef)", 
+          "price": 15.00, 
+          "description": "Potatoes, Peanuts, bell peppers" 
+        },
+        { 
+          "name": "Tom Yum (chicken/seafood)", 
+          "price": 15.00, 
+          "description": "Scallions, coriander, mushrooms, tomatoes" 
+        },
+        { 
+          "name": "Stir-fried beef Oyster sauce", 
+          "price": 17.00,
+          "description": "Carrots, onions" 
+        },
+        { 
+          "name": "Stir-fried Broccoli (vegan)", 
+          "price": 15.00,
+          "description": "Broccoli, carrots, garlic" 
+        },
+        { 
+          "name": "Fried rice (chicken/pork/beef/seafood)", 
+          "price": 15.00, 
+          "description": "Egg, boiled onions, carrots, onions" 
+        },
+        { 
+          "name": "Stir-fried Chicken Cashew nuts", 
+          "price": 16.00,
+          "description": "Cashew nuts, onions, carrots" 
+        },
+        { 
+          "name": "Sweet Chicken", 
+          "price": 16.00 
+        },
+        { 
+          "name": "Papaya Salad", 
+          "price": 16.00 
+        }
+      ]
+    },
+    {
+      "name": "Fried Food",
+      "items": [
+        { 
+          "name": "Spring Rolls (vegan)", 
+          "price": 12.00,
+          "description": "6 pieces" 
+        },
+        { 
+          "name": "Fried Bag Dumplings (vegan/beef/shrimp)", 
+          "price": 12.00,
+          "description": "6 pieces" 
+        },
+        { 
+          "name": "Honey Baked Chicken", 
+          "price": 12.00,
+          "description": "6 pieces" 
+        },
+        { 
+          "name": "Omelette (pork/chicken/shrimp)", 
+          "price": 12.00 
+        },
+        { 
+          "name": "Fried Mushrooms", 
+          "price": 12.00 
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        { 
+          "name": "Cha Thai", 
+          "price": 4.00 
+        },
+        { 
+          "name": "Pink Milk", 
+          "price": 4.00 
+        },
+        { 
+          "name": "Coconut", 
+          "price": 4.00 
+        }
+      ]
+    },
+    {
+      "name": "Extras",
+      "items": [
+        { 
+          "name": "Rice", 
+          "price": 4.00 
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        { 
+          "name": "Mango Sticky Rice", 
+          "price": 12.00 
+        }
       ]
     }
   ]

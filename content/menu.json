@@ -1,124 +1,124 @@
 {
-  "title": "Our Menu",
-  "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
+  "title": "menu.pageTitle",
+  "description": "menu.description",
   "pageHeader": {
-    "title": "Our Menu",
-    "subtitle": "Authentic Thai Cuisine",
+    "title": "menu.pageTitle",
+    "subtitle": "menu.pageSubtitle",
     "image": "/img/menu_header.jpg"
   },
   "categories": [
     {
-      "name": "Main Dishes",
+      "name": "menu.categories.mainDishes",
       "items": [
         { 
-          "name": "Pad Thai (chicken/shrimp)", 
+          "name": "menu.dishes.padThai", 
           "price": 14.00, 
-          "description": "Scallions, bean sprouts" 
+          "description": "menu.dishes.padThaiDesc" 
         },
         { 
-          "name": "Green Curry (chicken/pork/beef)", 
+          "name": "menu.dishes.greenCurry", 
           "price": 15.00, 
-          "description": "Potatoes, broccoli, bell peppers" 
+          "description": "menu.dishes.greenCurryDesc" 
         },
         { 
-          "name": "Massaman Curry (chicken/pork/beef)", 
+          "name": "menu.dishes.massamanCurry", 
           "price": 15.00, 
-          "description": "Potatoes, Peanuts, bell peppers" 
+          "description": "menu.dishes.massamanCurryDesc" 
         },
         { 
-          "name": "Tom Yum (chicken/seafood)", 
+          "name": "menu.dishes.tomYum", 
           "price": 15.00, 
-          "description": "Scallions, coriander, mushrooms, tomatoes" 
+          "description": "menu.dishes.tomYumDesc" 
         },
         { 
-          "name": "Stir-fried beef Oyster sauce", 
+          "name": "menu.dishes.stirFriedBeef", 
           "price": 17.00,
-          "description": "Carrots, onions" 
+          "description": "menu.dishes.stirFriedBeefDesc" 
         },
         { 
-          "name": "Stir-fried Broccoli (vegan)", 
+          "name": "menu.dishes.stirFriedBroccoli", 
           "price": 15.00,
-          "description": "Broccoli, carrots, garlic" 
+          "description": "menu.dishes.stirFriedBroccoliDesc" 
         },
         { 
-          "name": "Fried rice (chicken/pork/beef/seafood)", 
+          "name": "menu.dishes.friedRice", 
           "price": 15.00, 
-          "description": "Egg, boiled onions, carrots, onions" 
+          "description": "menu.dishes.friedRiceDesc" 
         },
         { 
-          "name": "Stir-fried Chicken Cashew nuts", 
+          "name": "menu.dishes.stirFriedChicken", 
           "price": 16.00,
-          "description": "Cashew nuts, onions, carrots" 
+          "description": "menu.dishes.stirFriedChickenDesc" 
         },
         { 
-          "name": "Sweet Chicken", 
+          "name": "menu.dishes.sweetChicken", 
           "price": 16.00 
         },
         { 
-          "name": "Papaya Salad", 
+          "name": "menu.dishes.papayaSalad", 
           "price": 16.00 
         }
       ]
     },
     {
-      "name": "Fried Food",
+      "name": "menu.categories.friedFood",
       "items": [
         { 
-          "name": "Spring Rolls (vegan)", 
+          "name": "menu.dishes.springRolls", 
           "price": 12.00,
-          "description": "6 pieces" 
+          "description": "menu.dishes.springRollsDesc" 
         },
         { 
-          "name": "Fried Bag Dumplings (vegan/beef/shrimp)", 
+          "name": "menu.dishes.friedBagDumplings", 
           "price": 12.00,
-          "description": "6 pieces" 
+          "description": "menu.dishes.friedBagDumplingsDesc" 
         },
         { 
-          "name": "Honey Baked Chicken", 
+          "name": "menu.dishes.honeyBakedChicken", 
           "price": 12.00,
-          "description": "6 pieces" 
+          "description": "menu.dishes.honeyBakedChickenDesc" 
         },
         { 
-          "name": "Omelette (pork/chicken/shrimp)", 
+          "name": "menu.dishes.omelette", 
           "price": 12.00 
         },
         { 
-          "name": "Fried Mushrooms", 
+          "name": "menu.dishes.friedMushrooms", 
           "price": 12.00 
         }
       ]
     },
     {
-      "name": "Drinks",
+      "name": "menu.categories.drinks",
       "items": [
         { 
-          "name": "Cha Thai", 
+          "name": "menu.dishes.chaThai", 
           "price": 4.00 
         },
         { 
-          "name": "Pink Milk", 
+          "name": "menu.dishes.pinkMilk", 
           "price": 4.00 
         },
         { 
-          "name": "Coconut", 
+          "name": "menu.dishes.coconut", 
           "price": 4.00 
         }
       ]
     },
     {
-      "name": "Extras",
+      "name": "menu.categories.extras",
       "items": [
         { 
-          "name": "Rice", 
+          "name": "menu.dishes.rice", 
           "price": 4.00 
         }
       ]
     },
     {
-      "name": "Dessert",
+      "name": "menu.categories.dessert",
       "items": [
         { 
-          "name": "Mango Sticky Rice", 
+          "name": "menu.dishes.mangoStickyRice", 
           "price": 12.00 
         }
       ]

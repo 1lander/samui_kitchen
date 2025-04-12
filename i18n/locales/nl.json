@@ -1,3 +1,49 @@
 {
-    "welcome": "Welkom bij Samui Kitchen"
+    "welcome": "Welkom bij Samui Kitchen",
+    "menu": {
+        "pageTitle": "Ons Menu",
+        "pageSubtitle": "Authentieke Thaise Keuken",
+        "description": "Ontdek ons uitgebreide menu van authentieke Thaise gerechten, bereid met traditionele recepten en de meest verse ingrediënten. Alle gerechten kunnen worden aangepast aan uw gewenste pittigheid.",
+        "loading": "Inhoud laden...",
+        "categories": {
+            "mainDishes": "Hoofdgerechten",
+            "friedFood": "Gefrituurde Gerechten",
+            "drinks": "Dranken",
+            "extras": "Extra's",
+            "dessert": "Dessert"
+        },
+        "dishes": {
+            "padThai": "Pad Thai (kip/garnalen)",
+            "padThaiDesc": "Lente-uitjes, taugé",
+            "greenCurry": "Groene Curry (kip/varkensvlees/rundvlees)",
+            "greenCurryDesc": "Aardappelen, broccoli, paprika",
+            "massamanCurry": "Massaman Curry (kip/varkensvlees/rundvlees)",
+            "massamanCurryDesc": "Aardappelen, pinda's, paprika",
+            "tomYum": "Tom Yum (kip/zeevruchten)",
+            "tomYumDesc": "Lente-uitjes, koriander, champignons, tomaten",
+            "stirFriedBeef": "Roerbak rundvlees in oestersaus",
+            "stirFriedBeefDesc": "Wortels, uien",
+            "stirFriedBroccoli": "Roerbak Broccoli (vegan)",
+            "stirFriedBroccoliDesc": "Broccoli, wortels, knoflook",
+            "friedRice": "Gebakken rijst (kip/varkensvlees/rundvlees/zeevruchten)",
+            "friedRiceDesc": "Ei, gekookte uien, wortels, uien",
+            "stirFriedChicken": "Roerbak Kip met Cashewnoten",
+            "stirFriedChickenDesc": "Cashewnoten, uien, wortels",
+            "sweetChicken": "Zoete Kip",
+            "papayaSalad": "Papaya Salade",
+            "rice": "Rijst",
+            "springRolls": "Loempia's (vegan)",
+            "springRollsDesc": "6 stuks",
+            "friedBagDumplings": "Gefrituurde Dumplings (vegan/rundvlees/garnalen)",
+            "friedBagDumplingsDesc": "6 stuks",
+            "honeyBakedChicken": "Honing Gebakken Kip",
+            "honeyBakedChickenDesc": "6 stuks",
+            "omelette": "Omelet (varkensvlees/kip/garnalen)",
+            "friedMushrooms": "Gefrituurde Champignons",
+            "chaThai": "Thaise Thee",
+            "pinkMilk": "Roze Melk",
+            "coconut": "Kokosnoot",
+            "mangoStickyRice": "Mango Kleefrijst"
+        }
+    }
 }

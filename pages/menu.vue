@@ -46,7 +46,7 @@ useSeoMeta({
         class="mb-12"
       >
         <h2
-          class="text-3xl font-bold mb-6 text-center border-b-2 border-pink-500 pb-2"
+          class="text-3xl font-bold mb-6 text-center border-b-2 border-secondary pb-2"
         >
           {{ t(category.name) }}
         </h2>
@@ -60,15 +60,15 @@ useSeoMeta({
             <div class="flex justify-between items-start">
               <h3 class="text-xl font-semibold">{{ t(item.name) }}</h3>
               <div class="text-right">
-                <span class="text-lg font-medium text-pink-600">
+                <span class="text-lg font-medium text-secondary">
                   € {{ item.price.toFixed(2) }}
                 </span>
-                <span v-if="item.secondPrice" class="text-lg font-medium text-pink-600 ml-1">
+                <span v-if="item.secondPrice" class="text-lg font-medium text-secondary ml-1">
                   / € {{ item.secondPrice.toFixed(2) }}
                 </span>
               </div>
             </div>
-            <p v-if="item.description" class="text-gray-600 mt-1">
+            <p v-if="item.description" class="text-secondary mt-1">
               {{ t(item.description) }}
             </p>
           </div>

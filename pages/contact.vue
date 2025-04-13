@@ -49,24 +49,13 @@ const submitForm = async () => {
 
 <template>
   <div v-if="contact" class="container mx-auto px-4 py-12">
-    <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
-      <NuxtImg
-        :src="contact.pageHeader.image"
-        :alt="$t('contact.pageHeader.title')"
-        class="w-full h-full object-cover"
-      />
-      <div
-        class="absolute inset-0 flex flex-col justify-center items-center text-white"
-      >
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">
-          {{ $t('contact.pageTitle') }}
-        </h1>
-        <p class="text-xl md:text-2xl">{{ $t('contact.pageSubtitle') }}</p>
-      </div>
-    </div>
+    <PageHeader
+      :image="contact.pageHeader.image"
+      :title="$t('contact.pageTitle')"
+      :subtitle="$t('contact.pageSubtitle')"
+    />
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <!-- Contact Information -->
       <div>
         <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.info.title') }}</h2>
         
@@ -111,7 +100,6 @@ const submitForm = async () => {
           </div>
         </div>
 
-        <!-- Opening Hours -->
         <div class="mt-10">
           <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.hours.title') }}</h2>
           <div class="space-y-2">
@@ -127,28 +115,23 @@ const submitForm = async () => {
         </div>
       </div>
 
-      <!-- Contact Form -->
       <div>
         <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.form.title') }}</h2>
         
-        <!-- Success Message -->
         <div v-if="isSubmitted" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
           <p>{{ $t('contact.form.success') }}</p>
         </div>
         
-        <!-- Error Message -->
         <div v-if="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
           <p>{{ errorMessage }}</p>
         </div>
         
-        <!-- Form -->
         <form v-if="!isSubmitted" @submit.prevent="submitForm" class="space-y-6">
           <div v-for="field in contact.formFields" :key="field.name" class="space-y-1">
             <label :for="field.name" class="block text-sm font-medium text-gray-700">
               {{ $t(field.label) }} {{ field.required ? '*' : '' }}
             </label>
             
-            <!-- Text, Email, Tel inputs -->
             <input 
               v-if="['text', 'email', 'tel'].includes(field.type)" 
               :type="field.type" 
@@ -171,7 +154,6 @@ const submitForm = async () => {
               </option>
             </select>
             
-            <!-- Textarea -->
             <textarea 
               v-else-if="field.type === 'textarea'" 
               :id="field.name" 

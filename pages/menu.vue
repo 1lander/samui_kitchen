@@ -15,21 +15,11 @@ useSeoMeta({
 
 <template>
   <div v-if="menu" class="container mx-auto px-4 py-12">
-    <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
-      <NuxtImg
-        :src="menu.pageHeader.image"
-        :alt="$t('menu.pageTitle')"
-        class="w-full h-full object-cover"
-      />
-      <div
-        class="absolute inset-0 flex flex-col justify-center items-center text-white"
-      >
-        <h1 class="text-4xl md:text-5xl font-bold mb-2">
-          {{ $t('menu.pageTitle') }}
-        </h1>
-        <p class="text-xl md:text-2xl">{{ $t('menu.pageSubtitle') }}</p>
-      </div>
-    </div>
+    <PageHeader
+      :image="menu.pageHeader.image"
+      :title="$t('menu.pageTitle')"
+      :subtitle="$t('menu.pageSubtitle')"
+    />
 
     <div class="max-w-3xl mx-auto mb-12 text-center">
       <p class="text-lg text-gray-700">{{ $t('menu.description') }}</p>

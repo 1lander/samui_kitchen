@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/i18n',
+    '@nuxtjs/leaflet'
   ],
   content: {
     build: {

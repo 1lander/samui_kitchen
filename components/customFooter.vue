@@ -1,9 +1,9 @@
 <script setup>
-const { data: footerContent } = await useAsyncData(() =>
-  queryCollection("content").path("/footer").first()
+const { data: contactContent } = await useAsyncData('contact', () =>
+  queryCollection("content").path("/contact").first()
 );
 
-const footerData = computed(() => footerContent.value?.body);
+const contactData = computed(() => contactContent.value?.body);
 </script>
 
 <template>
@@ -17,22 +17,16 @@ const footerData = computed(() => footerContent.value?.body);
           <p>{{ $t('footer.brand.tagline') }}</p>
           <div class="mt-4 flex space-x-4">
             <a
-              v-for="social in footerData.brand.socialMedia"
-              :key="social.name"
+              v-for="social in contactData.contactInfo.social"
+              :key="social.platform"
               :href="social.url"
               class="text-secondary hover:text-secondary"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span class="sr-only">{{ social.name }}</span>
+              <span class="sr-only">{{ social.platform }}</span>
               <Icon 
-                v-if="social.name === 'Facebook'" 
-                name="mdi:facebook" 
-                class="w-6 h-6"
-              />
-              <Icon 
-                v-if="social.name === 'Instagram'" 
-                name="mdi:instagram" 
+                :name="`mdi:${social.icon}`" 
                 class="w-6 h-6"
               />
             </a>
@@ -44,10 +38,10 @@ const footerData = computed(() => footerContent.value?.body);
           </h3>
           <ul class="space-y-2">
             <li>
-              {{ $t('footer.hours.weekdays') }} {{ footerData.hours.weekdays }}
+              {{ $t('footer.hours.weekdays') }} {{ contactData.hours.weekdays }}
             </li>
             <li>
-              {{ $t('footer.hours.weekends') }} {{ footerData.hours.weekends }}
+              {{ $t('footer.hours.weekends') }} {{ contactData.hours.weekends }}
             </li>
           </ul>
         </div>
@@ -57,19 +51,19 @@ const footerData = computed(() => footerContent.value?.body);
           </h3>
           <address class="not-italic">
             <p
-              v-for="(line, index) in footerData.contact.address"
+              v-for="(line, index) in contactData.contactInfo.address"
               :key="index"
             >
               {{ line }}
             </p>
-            <p>{{ $t('footer.contact.phone') }}: {{ footerData.contact.phone }}</p>
-            <p>{{ $t('footer.contact.email') }}: {{ footerData.contact.email }}</p>
+            <p>{{ $t('footer.contact.phone') }}: {{ contactData.contactInfo.phone }}</p>
+            <p>{{ $t('footer.contact.email') }}: {{ contactData.contactInfo.email }}</p>
           </address>
         </div>
       </div>
       <div class="border-t border-secondary mt-8 pt-6 text-center">
         <p>
-          &copy; {{ new Date().getFullYear() }} {{ footerData.brand.name }}.
+          &copy; {{ new Date().getFullYear() }} {{ $t('brand.name') }}.
           {{ $t('footer.copyright') }}
         </p>
       </div>

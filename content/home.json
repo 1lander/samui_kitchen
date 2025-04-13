@@ -1,0 +1,90 @@
+{
+  "hero": {
+    "title": "Authentic Thai Cuisine",
+    "subtitle": "Experience the flavors of Thailand in the heart of Antwerp",
+    "image": "/img/hero.jpg",
+    "cta": {
+      "text": "View Menu",
+      "link": "/menu"
+    }
+  },
+  "introduction": {
+    "title": "Welcome to Samui Kitchen",
+    "content": "At Samui Kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui.",
+    "image": "/img/restaurant.jpg"
+  },
+  "features": [
+    {
+      "title": "Authentic Recipes",
+      "description": "Our dishes are prepared using traditional Thai recipes passed down through generations.",
+      "icon": "utensils"
+    },
+    {
+      "title": "Fresh Ingredients",
+      "description": "We source the freshest ingredients daily to ensure quality and authentic flavors in every dish.",
+      "icon": "leaf"
+    },
+    {
+      "title": "Fast Delivery",
+      "description": "Enjoy our delicious meals in the comfort of your home with our quick and reliable delivery service.",
+      "icon": "truck"
+    }
+  ],
+  "popularDishes": {
+    "title": "Popular Dishes",
+    "subtitle": "Customer favorites you must try",
+    "dishes": [
+      {
+        "name": "Pad Thai",
+        "description": "Stir-fried rice noodles with eggs, tofu, bean sprouts, and peanuts",
+        "image": "/img/pad_thai.jpg",
+        "price": "€14.95"
+      },
+      {
+        "name": "Green Curry",
+        "description": "Aromatic curry with coconut milk, bamboo shoots, and fresh herbs",
+        "image": "/img/green_curry.jpg",
+        "price": "€15.95"
+      },
+      {
+        "name": "Mango Sticky Rice",
+        "description": "Sweet sticky rice with fresh mango and coconut cream",
+        "image": "/img/mango_sticky_rice.jpg",
+        "price": "€7.95"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Customers Say",
+    "quotes": [
+      {
+        "text": "The most authentic Thai food I've had outside of Thailand. Absolutely delicious!",
+        "author": "Sophie V."
+      },
+      {
+        "text": "Fast delivery and the food was still hot. The flavors were amazing!",
+        "author": "Thomas D."
+      },
+      {
+        "text": "Their Pad Thai is to die for! I order at least once a week.",
+        "author": "Emma L."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Order?",
+    "subtitle": "Delivery or pickup available",
+    "buttons": [
+      {
+        "text": "Order Online",
+        "link": "/order",
+        "primary": true
+      },
+      {
+        "text": "Make a Reservation",
+        "link": "/contact",
+        "primary": false
+      }
+    ]
+  }
+}

@@ -39,8 +39,8 @@ const submitForm = async () => {
     };
     
     isSubmitted.value = true;
-  } catch (error) { // eslint-disable-line no-unused-vars
-    errorMessage.value = 'There was an error submitting your message. Please try again.';
+  } catch (error) {
+    errorMessage.value = error.message;
   } finally {
     isSubmitting.value = false;
   }

@@ -44,7 +44,16 @@ useSeoMeta({
             class="p-4 border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
           >
             <div class="flex justify-between items-start">
-              <h3 class="text-xl font-semibold">{{ $t(item.name) }}</h3>
+              <h3 class="text-xl font-semibold">
+                {{ $t(item.name) }}
+                <span v-if="item.dishChoices && item.dishChoices.length > 0" class="text-sm text-gray-600 block mt-1">
+                  {{ $t('menu.dishChoices.choice') }}: 
+                  <span v-for="(choice, choiceIndex) in item.dishChoices" :key="choiceIndex" class="mr-1">
+                    {{ $t(`menu.dishChoices.${choice}`) }}
+                    <template v-if="choiceIndex < item.dishChoices.length - 1">/</template>
+                  </span>
+                </span>
+              </h3>
               <div class="text-right">
                 <span class="text-lg font-medium text-secondary">
                   € {{ item.price.toFixed(2) }}

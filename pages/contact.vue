@@ -45,18 +45,6 @@ const submitForm = async () => {
     isSubmitting.value = false;
   }
 };
-
-// Map marker icon
-const markerIcon = computed(() => {
-  return {
-    iconUrl: '/img/marker-icon.png',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowUrl: '/img/marker-shadow.png',
-    shadowSize: [41, 41]
-  };
-});
 </script>
 
 <template>
@@ -211,34 +199,24 @@ const markerIcon = computed(() => {
     <!-- Map Section with Leaflet -->
     <div class="mt-16">
       <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.location.title') || 'Our Location' }}</h2>
-      <div class="rounded-lg overflow-hidden h-96">
+      <div class="rounded-lg overflow-hidden h-96 shadow-lg">
         <client-only>
           <LMap
             v-if="contact.location"
             style="height: 100%; width: 100%"
             :zoom="contact.location.zoom"
             :center="[contact.location.lat, contact.location.lng]"
-            :use-global-leaflet="false"
           >
+            <LControlZoom position="topright" />
             <LTileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"
               layer-type="base"
-              name="OpenStreetMap"
-              attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
+              name="Voyager"
+              attribution="&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
             />
-            <LMarker
-              :lat-lng="[contact.location.lat, contact.location.lng]"
-              :icon="markerIcon"
-            >
-              <LPopup>
-                <div>
-                  <h3 class="font-semibold">Samui Kitchen</h3>
-                  <div v-for="(line, index) in contact.contactInfo.address" :key="index">
-                    {{ line }}
-                  </div>
-                </div>
-              </LPopup>
-            </LMarker>
+            <MapMarker
+              :position="[contact.location.lat, contact.location.lng]"
+            />
           </LMap>
         </client-only>
       </div>
@@ -251,8 +229,8 @@ const markerIcon = computed(() => {
 </template>
 
 <style scoped>
-/* Ensure Leaflet CSS is properly loaded */
 :deep(.leaflet-container) {
   z-index: 1;
+  font-family: inherit;
 }
 </style>

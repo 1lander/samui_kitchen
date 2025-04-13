@@ -9,6 +9,22 @@
         "about": "Over Ons",
         "contact": "Contact"
     },
+    "home": {
+        "pageTitle": "Welkom bij Samui's Kitchen",
+        "pageSubtitle": "Ervaren de authentieke smaken van Thailand in het hart van Antwerpen",
+        "menuButton": "Bekijk Menu",
+        "introduction": {
+            "title": "Welkom bij Samui Kitchen",
+            "content": "Bij Samui Kitchen brengen we de echte smaken van Thailand naar je tafel. Onze chefs gebruiken traditionele recepten en verse ingrediënten om gerechten te maken die je direct naar Bangkok en Koh Samui brengen."
+        },
+        "menu": {
+            "title": "Populair Gerecht",
+            "subtitle": "Klassieke smaken die je moet proberen"
+        },
+        "testimonials": {
+            "title": "Wat onze klanten zeggen"
+        }
+    },
     "contact": {
         "pageTitle": "Contacteer Ons",
         "pageSubtitle": "We zouden graag van u horen.",

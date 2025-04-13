@@ -10,18 +10,21 @@
           "name": "menu.dishes.padThai", 
           "price": 14.00, 
           "description": "menu.dishes.padThaiDesc",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Phat_Thai_kung_Chang_Khien_street_stall.jpg/1280px-Phat_Thai_kung_Chang_Khien_street_stall.jpg",
           "isPopular": true
         },
         { 
           "name": "menu.dishes.greenCurry", 
           "price": 15.00, 
           "description": "menu.dishes.greenCurryDesc",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Thai_green_chicken_curry_and_roti.jpg",
           "isPopular": true
         },
         { 
           "name": "menu.dishes.massamanCurry", 
           "price": 15.00, 
           "description": "menu.dishes.massamanCurryDesc",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Kaeng_matsaman_kai.JPG/1280px-Kaeng_matsaman_kai.JPG",
           "isPopular": true
         },
         { 

@@ -9,17 +9,20 @@
         { 
           "name": "menu.dishes.padThai", 
           "price": 14.00, 
-          "description": "menu.dishes.padThaiDesc" 
+          "description": "menu.dishes.padThaiDesc",
+          "isPopular": true
         },
         { 
           "name": "menu.dishes.greenCurry", 
           "price": 15.00, 
-          "description": "menu.dishes.greenCurryDesc" 
+          "description": "menu.dishes.greenCurryDesc",
+          "isPopular": true
         },
         { 
           "name": "menu.dishes.massamanCurry", 
           "price": 15.00, 
-          "description": "menu.dishes.massamanCurryDesc" 
+          "description": "menu.dishes.massamanCurryDesc",
+          "isPopular": true
         },
         { 
           "name": "menu.dishes.tomYum", 

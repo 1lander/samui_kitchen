@@ -9,6 +9,22 @@
         "about": "About Us",
         "contact": "Contact"
     },
+    "home": {
+        "pageTitle": "Welcome to Samui's Kitchen",
+        "pageSubtitle": "Experience the authentic flavors of Thailand in the heart of Antwerp",
+        "menuButton": "View Menu",
+        "introduction": {
+            "title": "Welcome to Samui Kitchen",
+            "content": "At Samui Kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui."
+        },
+        "menu": {
+            "title": "Popular Dishes",
+            "subtitle": "Customer favorites you must try"
+        },
+        "testimonials": {
+            "title": "What Our Customers Say"
+        }
+    },
     "contact": {
         "pageTitle": "Contact Us",
         "pageSubtitle": "We'd Love to Hear From You",

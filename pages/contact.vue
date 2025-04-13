@@ -49,27 +49,26 @@ const submitForm = async () => {
 
 <template>
   <div v-if="contact" class="container mx-auto px-4 py-12">
-    <!-- Page Header -->
     <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
       <NuxtImg
         :src="contact.pageHeader.image"
-        :alt="$t(contact.pageHeader.title)"
+        :alt="$t('contact.pageHeader.title')"
         class="w-full h-full object-cover"
       />
       <div
         class="absolute inset-0 flex flex-col justify-center items-center text-white"
       >
         <h1 class="text-4xl md:text-5xl font-bold mb-2">
-          {{ $t(contact.pageHeader.title) }}
+          {{ $t('contact.pageTitle') }}
         </h1>
-        <p class="text-xl md:text-2xl">{{ $t(contact.pageHeader.subtitle) }}</p>
+        <p class="text-xl md:text-2xl">{{ $t('contact.pageSubtitle') }}</p>
       </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <!-- Contact Information -->
       <div>
-        <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
+        <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.info.title') }}</h2>
         
         <div class="space-y-4">
           <div class="flex items-start">
@@ -80,7 +79,7 @@ const submitForm = async () => {
               </svg>
             </div>
             <div>
-              <h3 class="font-medium">Address</h3>
+              <h3 class="font-medium">{{ $t('contact.info.address') }}</h3>
               <div class="text-gray-600">
                 <p v-for="(line, index) in contact.contactInfo.address" :key="index">{{ line }}</p>
               </div>
@@ -94,7 +93,7 @@ const submitForm = async () => {
               </svg>
             </div>
             <div>
-              <h3 class="font-medium">Phone</h3>
+              <h3 class="font-medium">{{ $t('contact.info.phone') }}</h3>
               <p class="text-gray-600">{{ contact.contactInfo.phone }}</p>
             </div>
           </div>
@@ -106,7 +105,7 @@ const submitForm = async () => {
               </svg>
             </div>
             <div>
-              <h3 class="font-medium">Email</h3>
+              <h3 class="font-medium">{{ $t('contact.info.email') }}</h3>
               <p class="text-gray-600">{{ contact.contactInfo.email }}</p>
             </div>
           </div>
@@ -114,44 +113,27 @@ const submitForm = async () => {
 
         <!-- Opening Hours -->
         <div class="mt-10">
-          <h2 class="text-2xl font-semibold mb-6">Opening Hours</h2>
+          <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.hours.title') }}</h2>
           <div class="space-y-2">
             <div class="flex justify-between border-b pb-2">
-              <span>{{ contact.openingHours.weekdays.days }}</span>
-              <span class="font-medium">{{ contact.openingHours.weekdays.hours }}</span>
+              <span>{{ $t('contact.hours.weekdays') }}</span>
+              <span class="font-medium">{{ contact.hours.weekdays }}</span>
             </div>
             <div class="flex justify-between border-b pb-2">
-              <span>{{ contact.openingHours.weekends.days }}</span>
-              <span class="font-medium">{{ contact.openingHours.weekends.hours }}</span>
+              <span>{{ $t('contact.hours.weekends') }}</span>
+              <span class="font-medium">{{ contact.hours.weekends }}</span>
             </div>
-          </div>
-        </div>
-
-        <!-- Social Media -->
-        <div class="mt-10">
-          <h2 class="text-2xl font-semibold mb-6">Follow Us</h2>
-          <div class="flex space-x-4">
-            <a v-for="social in contact.contactInfo.social" :key="social.platform" 
-               :href="social.url" target="_blank" rel="noopener noreferrer"
-               class="p-2 bg-primary text-white rounded-full hover:bg-primary-dark transition">
-              <span class="sr-only">{{ social.platform }}</span>
-              <!-- Icon placeholder -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 015.656 0l4 4a4 4 0 01-5.656 5.656l-1.1-1.1" />
-              </svg>
-            </a>
           </div>
         </div>
       </div>
 
       <!-- Contact Form -->
       <div>
-        <h2 class="text-2xl font-semibold mb-6">Send Us a Message</h2>
+        <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.form.title') }}</h2>
         
         <!-- Success Message -->
         <div v-if="isSubmitted" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-          <p>Thank you for your message! We'll get back to you soon.</p>
+          <p>{{ $t('contact.form.success') }}</p>
         </div>
         
         <!-- Error Message -->
@@ -163,7 +145,7 @@ const submitForm = async () => {
         <form v-if="!isSubmitted" @submit.prevent="submitForm" class="space-y-6">
           <div v-for="field in contact.formFields" :key="field.name" class="space-y-1">
             <label :for="field.name" class="block text-sm font-medium text-gray-700">
-              {{ field.label }} {{ field.required ? '*' : '' }}
+              {{ $t(field.label) }} {{ field.required ? '*' : '' }}
             </label>
             
             <!-- Text, Email, Tel inputs -->
@@ -185,7 +167,7 @@ const submitForm = async () => {
               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
             >
               <option v-for="option in field.options" :key="option" :value="option">
-                {{ option }}
+                {{ $t(option) }}
               </option>
             </select>
             
@@ -207,7 +189,7 @@ const submitForm = async () => {
               :disabled="isSubmitting"
             >
               <span v-if="isSubmitting">Sending...</span>
-              <span v-else>{{ contact.submitText }}</span>
+              <span v-else>{{ $t('contact.form.submit') }}</span>
             </button>
           </div>
         </form>
@@ -215,12 +197,12 @@ const submitForm = async () => {
     </div>
     
     <!-- Map Section (simplified) -->
-    <!-- <div class="mt-16">
+    <div class="mt-16">
       <h2 class="text-2xl font-semibold mb-6">Our Location</h2>
       <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
         <p class="text-gray-600">Map would be displayed here</p>
       </div>
-    </div> -->
+    </div>
   </div>
   
   <div v-else class="py-12 text-center">

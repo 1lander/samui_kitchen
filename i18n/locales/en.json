@@ -9,6 +9,37 @@
         "about": "About Us",
         "contact": "Contact"
     },
+    "contact": {
+        "pageTitle": "Contact Us",
+        "pageSubtitle": "We'd Love to Hear From You",
+        "info": {
+            "title": "Contact Information",
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email"
+        },
+        "hours": {
+            "title": "Opening Hours",
+            "weekdays": "Monday - Friday:",
+            "weekends": "Saturday - Sunday:"
+        },
+        "form": {
+            "title": "Get in Touch",
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Submit",
+            "success": "Thank you for your message! We'll get back to you soon.",
+            "options": {
+                "generalInquiry": "General Inquiry",
+                "reservation": "Reservation",
+                "feedback": "Feedback",
+                "catering": "Catering",
+                "other": "Other"
+            }
+        }
+    },
     "menu": {
         "pageTitle": "Our Menu",
         "pageSubtitle": "Authentic Thai Cuisine",

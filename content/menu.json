@@ -1,9 +1,5 @@
 {
-  "title": "menu.pageTitle",
-  "description": "menu.description",
   "pageHeader": {
-    "title": "menu.pageTitle",
-    "subtitle": "menu.pageSubtitle",
     "image": "/img/menu_header.jpg"
   },
   "categories": [

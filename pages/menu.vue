@@ -3,7 +3,6 @@ const { data: menuData } = await useAsyncData(() =>
   queryCollection("content").path("/menu").first()
 );
 
-// Access the menu data from the body property
 const menu = computed(() => menuData.value?.body);
 
 const { t } = useI18n();
@@ -19,25 +18,23 @@ useSeoMeta({
     <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
       <NuxtImg
         :src="menu.pageHeader.image"
-        :alt="$t(menu.pageHeader.title)"
+        :alt="$t('menu.pageTitle')"
         class="w-full h-full object-cover"
       />
       <div
         class="absolute inset-0 flex flex-col justify-center items-center text-white"
       >
         <h1 class="text-4xl md:text-5xl font-bold mb-2">
-          {{ $t(menu.title) }}
+          {{ $t('menu.pageTitle') }}
         </h1>
-        <p class="text-xl md:text-2xl">{{ $t(menu.pageHeader.subtitle) }}</p>
+        <p class="text-xl md:text-2xl">{{ $t('menu.pageSubtitle') }}</p>
       </div>
     </div>
 
-    <!-- Menu Description -->
     <div class="max-w-3xl mx-auto mb-12 text-center">
-      <p class="text-lg text-gray-700">{{ $t(menu.description) }}</p>
+      <p class="text-lg text-gray-700">{{ $t('menu.description') }}</p>
     </div>
 
-    <!-- Menu Categories -->
     <div class="max-w-5xl mx-auto">
       <div
         v-for="(category, index) in menu.categories"

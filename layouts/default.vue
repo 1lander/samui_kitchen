@@ -28,7 +28,6 @@ const handleLocaleChange = (event) => {
             <ul class="flex space-x-6 items-center">
               <li><NuxtLink to="/" class="hover:text-secondary font-medium transition">{{ $t('header.home') }}</NuxtLink></li>
               <li><NuxtLink to="/menu" class="hover:text-secondary font-medium transition">{{ $t('header.menu') }}</NuxtLink></li>
-              <li><NuxtLink to="/about" class="hover:text-secondary font-medium transition">{{ $t('header.about') }}</NuxtLink></li>
               <li><NuxtLink to="/contact" class="hover:text-secondary font-medium transition">{{ $t('header.contact') }}</NuxtLink></li>
               <li>
                 <div class="relative ml-4">

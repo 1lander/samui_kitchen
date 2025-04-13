@@ -1,0 +1,75 @@
+{
+  "title": "Contact Us",
+  "description": "Contact us for reservations, inquiries, or to place an order. We're here to serve you with authentic Thai cuisine.",
+  "pageHeader": {
+    "title": "Get in Touch",
+    "subtitle": "We'd Love to Hear From You",
+    "image": "/img/menu_header.jpg"
+  },
+  "contactInfo": {
+    "address": ["Jezusstraat 40, 102", "2000 Antwerpen"],
+    "phone": "+32 495 22 22 22",
+    "email": "info@samuikitchen.com",
+    "social": [
+      {
+        "platform": "Facebook",
+        "url": "https://facebook.com/samuikitchen",
+        "icon": "facebook"
+      },
+      {
+        "platform": "Instagram",
+        "url": "https://instagram.com/samuikitchen",
+        "icon": "instagram"
+      }
+    ]
+  },
+  "openingHours": {
+    "weekdays": {
+      "days": "Monday - Friday",
+      "hours": "11:00 AM - 10:00 PM"
+    },
+    "weekends": {
+      "days": "Saturday - Sunday",
+      "hours": "12:00 PM - 11:00 PM"
+    }
+  },
+  "formFields": [
+    {
+      "name": "name",
+      "label": "Your Name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email",
+      "label": "Email Address",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "subject",
+      "label": "Subject",
+      "type": "select",
+      "options": [
+        "General Inquiry",
+        "Reservation",
+        "Feedback",
+        "Catering",
+        "Other"
+      ],
+      "required": true
+    },
+    {
+      "name": "message",
+      "label": "Your Message",
+      "type": "textarea",
+      "required": true
+    }
+  ],
+  "submitText": "Send Message",
+  "location": {
+    "lat": 51.2211,
+    "lng": 4.4092,
+    "zoom": 15
+  }
+}

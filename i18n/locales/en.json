@@ -1,4 +1,8 @@
 {
+    "brand": {
+        "name": "Samui's Kitchen",
+        "tagline": "Bringing the authentic flavors of Thailand to your doorstep."
+    },
     "header": {
         "home": "Home",
         "menu": "Menu",
@@ -50,5 +54,18 @@
             "coconut": "Coconut",
             "mangoStickyRice": "Mango Sticky Rice"
         }
+    },
+    "footer": {
+        "hours": {
+            "title": "Opening Hours",
+            "weekdays": "Monday - Friday:",
+            "weekends": "Saturday - Sunday:"
+        },
+        "contact": {
+            "title": "Contact Us",
+            "phone": "Phone",
+            "email": "Email"
+        },
+        "copyright": "All rights reserved."
     }
 }

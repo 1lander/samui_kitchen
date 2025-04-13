@@ -1,4 +1,8 @@
 {
+    "brand": {
+        "name": "Samui's Kitchen",
+        "tagline": "Authentieke Thaise smaken bij u aan huis."
+    },
     "header": {
         "home": "Home",
         "menu": "Menu",
@@ -50,5 +54,21 @@
             "coconut": "Kokosnoot",
             "mangoStickyRice": "Mango Kleefrijst"
         }
+    },
+    "footer": {
+        "brand": {
+            "tagline": "Authentieke Thaise smaken bij u aan huis."
+        },
+        "hours": {
+            "title": "Openingstijden",
+            "weekdays": "Maandag - Vrijdag:",
+            "weekends": "Zaterdag - Zondag:"
+        },
+        "contact": {
+            "title": "Contacteer Ons",
+            "phone": "Telefoon",
+            "email": "E-mail"
+        },
+        "copyright": "Alle rechten voorbehouden."
     }
 }

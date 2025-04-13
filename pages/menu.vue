@@ -16,9 +16,8 @@ useSeoMeta({
 
 <template>
   <div v-if="menu" class="container mx-auto px-4 py-12">
-    <!-- Page Header -->
     <div class="relative h-64 md:h-80 mb-12 rounded-lg overflow-hidden">
-      <img
+      <NuxtImg
         :src="menu.pageHeader.image"
         :alt="t(menu.pageHeader.title)"
         class="w-full h-full object-cover"

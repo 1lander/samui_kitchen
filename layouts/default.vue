@@ -18,10 +18,10 @@ const handleLocaleChange = (event) => {
       <div class="container mx-auto">
         <div class="flex justify-between items-center">
           <div class="flex items-center">
-            <img src="/img/logo.png" alt="Koh Samui Kitchen Logo" class="h-24">
+            <NuxtImg src="/img/logo.png" alt="Koh Samui Kitchen Logo" class="h-24" />
             <div>
-              <h1 class="text-3xl font-bold text-primary leading-none">Samui' Kitchen</h1>
-              <div class="text-secondary">เกาะสมุย' คิทเช่น</div>
+              <h1 class="text-3xl font-bold text-primary leading-none">{{ $t('brand.name') }}</h1>
+              <div class="text-secondary">{{ $t('brand.tagline') }}</div>
             </div>
           </div>
           <nav class="hidden md:block">

@@ -196,9 +196,8 @@ const submitForm = async () => {
       </div>
     </div>
     
-    <!-- Map Section with Leaflet -->
     <div class="mt-16">
-      <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.location.title') || 'Our Location' }}</h2>
+      <h2 class="text-2xl font-semibold mb-6">{{ $t('contact.mapTitle') }}</h2>
       <div class="rounded-lg overflow-hidden h-96 shadow-lg">
         <client-only>
           <LMap

@@ -38,7 +38,8 @@
                 "catering": "Catering",
                 "other": "Other"
             }
-        }
+        },
+        "mapTitle": "Find Us on the Map"
     },
     "menu": {
         "pageTitle": "Our Menu",

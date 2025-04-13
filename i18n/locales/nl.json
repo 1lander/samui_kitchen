@@ -9,6 +9,38 @@
         "about": "Over Ons",
         "contact": "Contact"
     },
+    "contact": {
+        "pageTitle": "Contacteer Ons",
+        "pageSubtitle": "We zouden graag van u horen.",
+        "info": {
+            "title": "Contactgegevens",
+            "address": "Adres",
+            "phone": "Telefoon",
+            "email": "E-mail"
+        },
+        "hours": {
+            "title": "Openingstijden",
+            "weekdays": "Maandag - Vrijdag:",
+            "weekends": "Zaterdag - Zondag:"
+        },
+        "form": {
+            "title": "Neem contact met ons op",
+            "name": "Naam",
+            "email": "E-mail",
+            "subject": "Onderwerp",
+            "message": "Bericht",
+            "submit": "Verzenden",
+            "success": "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
+            "options": {
+                "generalInquiry": "Algemene Vraag",
+                "reservation": "Reservatie",
+                "feedback": "Feedback",
+                "catering": "Catering",
+                "other": "Anders"
+            }
+        },
+        "mapTitle": "Vind ons op de kaart"
+    },
     "menu": {
         "pageTitle": "Ons Menu",
         "pageSubtitle": "Authentieke Thaise Keuken",

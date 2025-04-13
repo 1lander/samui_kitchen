@@ -9,6 +9,38 @@
         "about": "เกี่ยวกับเรา",
         "contact": "ติดต่อเรา"
     },
+    "contact": {
+        "pageTitle": "ติดต่อเรา",
+        "pageSubtitle": "เราต้องการรับฟังคุณ",
+        "info": {
+            "title": "ข้อมูลติดต่อ",
+            "address": "ที่อยู่",
+            "phone": "โทรศัพท์",
+            "email": "อีเมล"
+        },
+        "hours": {
+            "title": "เวลาทำการ",
+            "weekdays": "จันทร์ - ศุกร์:",
+            "weekends": "เสาร์ - อาทิตย์:"
+        },
+        "form": {
+            "title": "ติดต่อเรา",
+            "name": "ชื่อ",
+            "email": "อีเมล",
+            "subject": "หัวข้อ",
+            "message": "ข้อความ",
+            "submit": "ส่งข้อมูล",
+            "success": "ข้อความของคุณถูกส่งไปเรียบร้อย เราจะติดต่อคุณเร็วๆ นี้",
+            "options": {
+                "generalInquiry": "คำถามทั่วไป",
+                "reservation": "จองคิว",
+                "feedback": "ความคิดเห็น",
+                "catering": "จัดงาน",
+                "other": "อื่นๆ"
+            }
+        },
+        "mapTitle": "ค้นหาเราในแผนที่"
+    },
     "menu": {
         "pageTitle": "เมนูของเรา",
         "pageSubtitle": "อาหารไทยแท้",

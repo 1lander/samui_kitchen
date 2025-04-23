@@ -36,10 +36,10 @@
             </NuxtLink>
 
             <div>
-              <h1 class="text-3xl font-bold leading-none text-primary">
+              <h1 class="text-2xl font-bold leading-none text-primary md:text-3xl">
                 {{ $t("brand.name") }}
               </h1>
-              <div class="text-secondary">{{ $t("brand.tagline") }}</div>
+              <div class="text-secondary text-sm md:text-lg">{{ $t("brand.tagline") }}</div>
             </div>
           </div>
           <nav class="hidden md:block">
@@ -171,7 +171,7 @@
       </div>
     </div>
 
-    <main class="container mx-auto flex-grow px-4 py-8">
+    <main class="container mx-auto flex-grow py-8 md:px-8">
       <slot />
     </main>
 

@@ -27,95 +27,93 @@
       </NuxtLink>
     </PageHeader>
 
-    <section class="mx-auto max-w-7xl px-4 py-16">
-      <div class="grid items-center gap-12 md:grid-cols-2">
-        <div>
-          <h2 class="mb-6 text-3xl font-bold">
-            {{ t("home.introduction.title") }}
-          </h2>
-          <p class="text-lg text-gray-700">
+    <div class="flex flex-col gap-20">
+      <section class="mx-auto max-w-7xl">
+        <div class="grid items-center gap-12 md:grid-cols-2">
+          <div class="px-3 text-lg text-gray-700 md:px-0">
             {{ t("home.introduction.content") }}
-          </p>
-        </div>
-        <div>
+          </div>
           <NuxtImg
             :src="home.introduction.image"
             alt="Samui Kitchen restaurant"
-            class="h-auto w-full rounded-lg shadow-xl"
+            class="h-auto w-full shadow-xl md:rounded-lg"
           />
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Features Section -->
-    <section class="bg-gray-50 py-16">
-      <div class="mx-auto max-w-7xl px-4">
+      <!-- Features Section -->
+      <section>
+        <div class="mx-auto max-w-7xl px-4">
+          <div class="grid gap-8 md:grid-cols-3">
+            <div
+              v-for="(feature, index) in home.features"
+              :key="index"
+              class="rounded-lg bg-white p-8 text-center shadow-md"
+            >
+              <div class="mb-4 text-primary">
+                <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
+              </div>
+              <h3 class="mb-3 text-xl font-bold">{{ feature.title }}</h3>
+              <p class="text-gray-600">{{ feature.description }}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Dishes Section -->
+      <section class="max-w-7xl md:mx-auto">
+        <div class="mb-8 text-center">
+          <h2 class="mb-2 text-3xl font-bold">{{ t("home.menu.title") }}</h2>
+          <p class="text-lg text-gray-600">{{ t("home.menu.subtitle") }}</p>
+        </div>
         <div class="grid gap-8 md:grid-cols-3">
           <div
-            v-for="(feature, index) in home.features"
+            v-for="(dish, index) in popularDishes"
             :key="index"
-            class="rounded-lg bg-white p-8 text-center shadow-md"
+            class="overflow-hidden bg-white shadow-lg md:rounded-lg"
           >
-            <div class="mb-4 text-primary">
-              <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
+            <NuxtImg :src="dish.image" :alt="dish.name" class="h-64 w-full object-cover" />
+            <div class="p-6">
+              <div class="mb-2 flex items-center justify-between">
+                <h3 class="text-xl font-bold">{{ t(dish.name) }}</h3>
+                <span class="font-semibold text-primary">{{ dish.price.toFixed(2) }} €</span>
+              </div>
+              <p v-if="dish.description" class="text-gray-600">
+                {{ t(dish.description) }}
+              </p>
             </div>
-            <h3 class="mb-3 text-xl font-bold">{{ feature.title }}</h3>
-            <p class="text-gray-600">{{ feature.description }}</p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Popular Dishes Section -->
-    <section class="mx-auto max-w-7xl px-4 py-16">
-      <div class="mb-12 text-center">
-        <h2 class="mb-2 text-3xl font-bold">{{ t("home.menu.title") }}</h2>
-        <p class="text-lg text-gray-600">{{ t("home.menu.subtitle") }}</p>
-      </div>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div v-for="(dish, index) in popularDishes" :key="index" class="overflow-hidden rounded-lg bg-white shadow-lg">
-          <NuxtImg :src="dish.image" :alt="dish.name" class="h-64 w-full object-cover" />
-          <div class="p-6">
-            <div class="mb-2 flex items-center justify-between">
-              <h3 class="text-xl font-bold">{{ t(dish.name) }}</h3>
-              <span class="font-semibold text-red-600">{{ dish.price.toFixed(2) }} €</span>
+      <!-- Testimonials Section -->
+      <section>
+        <div class="mx-auto max-w-7xl px-4">
+          <h2 class="mb-8 text-center text-3xl font-bold">
+            {{ t("home.testimonials.title") }}
+          </h2>
+          <div class="grid gap-8 md:grid-cols-3">
+            <div
+              v-for="(quote, index) in home.testimonials.quotes"
+              :key="index"
+              class="rounded-lg bg-white p-8 shadow-md"
+            >
+              <div class="mb-4 text-yellow-500">
+                <Icon name="mdi:star" class="text-xl" />
+                <Icon name="mdi:star" class="text-xl" />
+                <Icon name="mdi:star" class="text-xl" />
+                <Icon name="mdi:star" class="text-xl" />
+                <Icon name="mdi:star" class="text-xl" />
+              </div>
+              <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
+              <p class="font-medium">— {{ quote.author }}</p>
             </div>
-            <p v-if="dish.description" class="text-gray-600">
-              {{ t(dish.description) }}
-            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Testimonials Section -->
-    <section class="bg-gray-50 py-16">
-      <div class="mx-auto max-w-7xl px-4">
-        <h2 class="mb-12 text-center text-3xl font-bold">
-          {{ t("home.testimonials.title") }}
-        </h2>
-        <div class="grid gap-8 md:grid-cols-3">
-          <div
-            v-for="(quote, index) in home.testimonials.quotes"
-            :key="index"
-            class="rounded-lg bg-white p-8 shadow-md"
-          >
-            <div class="mb-4 text-yellow-500">
-              <Icon name="mdi:star" class="text-xl" />
-              <Icon name="mdi:star" class="text-xl" />
-              <Icon name="mdi:star" class="text-xl" />
-              <Icon name="mdi:star" class="text-xl" />
-              <Icon name="mdi:star" class="text-xl" />
-            </div>
-            <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
-            <p class="font-medium">— {{ quote.author }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <!-- <section class="py-16 bg-red-600 text-white">
+      <!-- CTA Section -->
+      <!-- <section class="py-16 bg-red-600 text-white">
       <div class="max-w-4xl mx-auto text-center px-4">
         <h2 class="text-3xl font-bold mb-3">{{ home.cta.title }}</h2>
         <p class="text-xl mb-8">{{ home.cta.subtitle }}</p>
@@ -134,6 +132,7 @@
         </div>
       </div>
     </section> -->
+    </div>
   </div>
   <div v-else class="py-12 text-center">
     <p class="text-lg text-gray-600">Loading content...</p>

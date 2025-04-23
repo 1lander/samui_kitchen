@@ -29,7 +29,7 @@
           <div
             v-for="(item, itemIndex) in category.items"
             :key="itemIndex"
-            class="rounded-lg border border-gray-200 p-4 transition-shadow hover:shadow-md"
+            class="border border-gray-200 p-4 transition-shadow hover:shadow-md md:rounded-lg"
           >
             <div class="flex items-start justify-between">
               <h3 class="text-xl font-semibold">

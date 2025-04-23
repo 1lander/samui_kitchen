@@ -80,7 +80,7 @@
 
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <!-- Menu Items Column -->
-      <div class="lg:col-span-2">
+      <div class="order-2 lg:order-1 lg:col-span-2">
         <h2 class="mb-6 text-2xl font-bold">{{ t("order.selectItems") }}</h2>
 
         <!-- Category selection -->
@@ -127,7 +127,7 @@
       </div>
 
       <!-- Order Summary Column -->
-      <div class="lg:col-span-1">
+      <div class="order-1 lg:order-2 lg:col-span-1">
         <div class="border border-gray-200 bg-white p-4 shadow-sm md:rounded-lg">
           <h2 class="mb-4 border-b border-gray-200 pb-2 text-xl font-bold">
             {{ t("order.yourOrder") }}

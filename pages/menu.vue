@@ -42,7 +42,7 @@
   <div v-if="menu">
     <PageHeader :image="menu.pageHeader.image" :title="t('menu.pageTitle')" :subtitle="t('menu.pageSubtitle')" />
 
-    <div class="mx-auto max-w-5xl px-4">
+    <div class="mx-auto max-w-5xl">
       <div class="mx-auto mb-12 max-w-3xl text-center">
         <p class="text-lg text-gray-700">{{ t("menu.description") }}</p>
       </div>

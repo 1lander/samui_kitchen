@@ -1,53 +1,51 @@
 <script setup lang="ts">
-import type { ContactContent } from "~/types";
-const { t } = useI18n();
+  import type { ContactContent } from "~/types";
+  const { t } = useI18n();
 
-const { data } = await useAsyncData(() =>
-  queryContent<ContactContent>("/contact").findOne()
-);
+  const { data } = await useAsyncData(() => queryContent<ContactContent>("/contact").findOne());
 
-const contact = computed(() => data.value);
+  const contact = computed(() => data.value);
 
-useSeoMeta({
-  title: t("contact.pageTitle") + " - Samui Kitchen",
-  description: t("contact.pageSubtitle"),
-});
+  useSeoMeta({
+    title: t("contact.pageTitle") + " - Samui Kitchen",
+    description: t("contact.pageSubtitle")
+  });
 
-const formData = ref({
-  name: "",
-  email: "",
-  subject: "General Inquiry",
-  message: "",
-});
+  const formData = ref({
+    name: "",
+    email: "",
+    subject: "General Inquiry",
+    message: ""
+  });
 
-const isSubmitting = ref(false);
-const isSubmitted = ref(false);
-const errorMessage = ref("");
+  const isSubmitting = ref(false);
+  const isSubmitted = ref(false);
+  const errorMessage = ref("");
 
-const submitForm = async () => {
-  isSubmitting.value = true;
-  errorMessage.value = "";
+  const submitForm = async () => {
+    isSubmitting.value = true;
+    errorMessage.value = "";
 
-  try {
-    // Here you would send the form data to your backend or API
-    // For demonstration, we'll simulate a successful submission after a delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Here you would send the form data to your backend or API
+      // For demonstration, we'll simulate a successful submission after a delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Clear form fields on success
-    formData.value = {
-      name: "",
-      email: "",
-      subject: "General Inquiry",
-      message: "",
-    };
+      // Clear form fields on success
+      formData.value = {
+        name: "",
+        email: "",
+        subject: "General Inquiry",
+        message: ""
+      };
 
-    isSubmitted.value = true;
-  } catch (error) {
-    errorMessage.value = error.message;
-  } finally {
-    isSubmitting.value = false;
-  }
-};
+      isSubmitted.value = true;
+    } catch (error) {
+      errorMessage.value = error.message;
+    } finally {
+      isSubmitting.value = false;
+    }
+  };
 </script>
 
 <template>
@@ -58,15 +56,15 @@ const submitForm = async () => {
       :subtitle="t('contact.pageSubtitle')"
     />
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
       <div>
-        <h2 class="text-2xl font-semibold mb-6">
+        <h2 class="mb-6 text-2xl font-semibold">
           {{ t("contact.info.title") }}
         </h2>
 
         <div class="space-y-4">
           <div class="flex items-start">
-            <div class="text-primary mr-4">
+            <div class="mr-4 text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -91,10 +89,7 @@ const submitForm = async () => {
             <div>
               <h3 class="font-medium">{{ t("contact.info.address") }}</h3>
               <div class="text-gray-600">
-                <p
-                  v-for="(line, index) in contact.contactInfo.address"
-                  :key="index"
-                >
+                <p v-for="(line, index) in contact.contactInfo.address" :key="index">
                   {{ line }}
                 </p>
               </div>
@@ -102,7 +97,7 @@ const submitForm = async () => {
           </div>
 
           <div class="flex items-start">
-            <div class="text-primary mr-4">
+            <div class="mr-4 text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -125,7 +120,7 @@ const submitForm = async () => {
           </div>
 
           <div class="flex items-start">
-            <div class="text-primary mr-4">
+            <div class="mr-4 text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6"
@@ -149,7 +144,7 @@ const submitForm = async () => {
         </div>
 
         <div class="mt-10">
-          <h2 class="text-2xl font-semibold mb-6">
+          <h2 class="mb-6 text-2xl font-semibold">
             {{ t("contact.hours.title") }}
           </h2>
           <div class="space-y-2">
@@ -166,46 +161,29 @@ const submitForm = async () => {
       </div>
 
       <div>
-        <h2 class="text-2xl font-semibold mb-6">
+        <h2 class="mb-6 text-2xl font-semibold">
           {{ t("contact.form.title") }}
         </h2>
 
-        <div
-          v-if="isSubmitted"
-          class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6"
-        >
+        <div v-if="isSubmitted" class="mb-6 rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700">
           <p>{{ t("contact.form.success") }}</p>
         </div>
 
-        <div
-          v-if="errorMessage"
-          class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6"
-        >
+        <div v-if="errorMessage" class="mb-6 rounded border border-red-400 bg-red-100 px-4 py-3 text-red-700">
           <p>{{ errorMessage }}</p>
         </div>
 
-        <form
-          v-if="!isSubmitted"
-          @submit.prevent="submitForm"
-          class="space-y-6"
-        >
-          <div
-            v-for="field in contact.formFields"
-            :key="field.name"
-            class="space-y-1"
-          >
-            <label
-              :for="field.name"
-              class="block text-sm font-medium text-gray-700"
-            >
+        <form v-if="!isSubmitted" class="space-y-6" @submit.prevent="submitForm">
+          <div v-for="field in contact.formFields" :key="field.name" class="space-y-1">
+            <label :for="field.name" class="block text-sm font-medium text-gray-700">
               {{ t(field.label) }} {{ field.required ? "*" : "" }}
             </label>
 
             <input
               v-if="['text', 'email', 'tel'].includes(field.type)"
-              :type="field.type"
               :id="field.name"
               v-model="formData[field.name]"
+              :type="field.type"
               :required="field.required"
               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
             />
@@ -218,11 +196,7 @@ const submitForm = async () => {
               :required="field.required"
               class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
             >
-              <option
-                v-for="option in field.options"
-                :key="option"
-                :value="option"
-              >
+              <option v-for="option in field.options" :key="option" :value="option">
                 {{ t(option) }}
               </option>
             </select>
@@ -240,7 +214,7 @@ const submitForm = async () => {
           <div>
             <button
               type="submit"
-              class="w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition"
+              class="hover:bg-primary-dark w-full rounded-md bg-primary px-4 py-2 text-white transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
               :disabled="isSubmitting"
             >
               <span v-if="isSubmitting">Sending...</span>
@@ -252,8 +226,8 @@ const submitForm = async () => {
     </div>
 
     <div class="mt-16">
-      <h2 class="text-2xl font-semibold mb-6">{{ t("contact.mapTitle") }}</h2>
-      <div class="rounded-lg overflow-hidden h-96 shadow-lg">
+      <h2 class="mb-6 text-2xl font-semibold">{{ t("contact.mapTitle") }}</h2>
+      <div class="h-96 overflow-hidden rounded-lg shadow-lg">
         <client-only>
           <LMap
             v-if="contact.location"
@@ -268,9 +242,7 @@ const submitForm = async () => {
               name="Voyager"
               attribution="&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
             />
-            <MapMarker
-              :position="[contact.location.lat, contact.location.lng]"
-            />
+            <MapMarker :position="[contact.location.lat, contact.location.lng]" />
           </LMap>
         </client-only>
       </div>
@@ -283,8 +255,8 @@ const submitForm = async () => {
 </template>
 
 <style scoped>
-:deep(.leaflet-container) {
-  z-index: 1;
-  font-family: inherit;
-}
+  :deep(.leaflet-container) {
+    z-index: 1;
+    font-family: inherit;
+  }
 </style>

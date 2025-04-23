@@ -1,131 +1,131 @@
 {
-    "brand": {
-        "name": "Samui's Kitchen",
-        "tagline": "Authentieke Thaise smaken bij u aan huis."
-    },
-    "header": {
-        "home": "Home",
-        "menu": "Menu",
-        "about": "Over Ons",
-        "contact": "Contact"
-    },
-    "home": {
-        "pageTitle": "Welkom bij Samui's Kitchen",
-        "pageSubtitle": "Ervaren de authentieke smaken van Thailand in het hart van Antwerpen",
-        "menuButton": "Bekijk Menu",
-        "introduction": {
-            "title": "Welkom bij Samui Kitchen",
-            "content": "Bij Samui Kitchen brengen we de echte smaken van Thailand naar je tafel. Onze chefs gebruiken traditionele recepten en verse ingrediënten om gerechten te maken die je direct naar Bangkok en Koh Samui brengen."
-        },
-        "menu": {
-            "title": "Populair Gerecht",
-            "subtitle": "Klassieke smaken die je moet proberen"
-        },
-        "testimonials": {
-            "title": "Wat onze klanten zeggen"
-        }
-    },
-    "contact": {
-        "pageTitle": "Contacteer Ons",
-        "pageSubtitle": "We zouden graag van u horen.",
-        "info": {
-            "title": "Contactgegevens",
-            "address": "Adres",
-            "phone": "Telefoon",
-            "email": "E-mail"
-        },
-        "hours": {
-            "title": "Openingstijden",
-            "weekdays": "Maandag - Vrijdag:",
-            "weekends": "Zaterdag - Zondag:"
-        },
-        "form": {
-            "title": "Neem contact met ons op",
-            "name": "Naam",
-            "email": "E-mail",
-            "subject": "Onderwerp",
-            "message": "Bericht",
-            "submit": "Verzenden",
-            "success": "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
-            "options": {
-                "generalInquiry": "Algemene Vraag",
-                "reservation": "Reservatie",
-                "feedback": "Feedback",
-                "catering": "Catering",
-                "other": "Anders"
-            }
-        },
-        "mapTitle": "Vind ons op de kaart"
+  "brand": {
+    "name": "Samui's Kitchen",
+    "tagline": "Authentieke Thaise smaken bij u aan huis."
+  },
+  "header": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "Over Ons",
+    "contact": "Contact"
+  },
+  "home": {
+    "pageTitle": "Welkom bij Samui's Kitchen",
+    "pageSubtitle": "Ervaren de authentieke smaken van Thailand in het hart van Antwerpen",
+    "menuButton": "Bekijk Menu",
+    "introduction": {
+      "title": "Welkom bij Samui Kitchen",
+      "content": "Bij Samui Kitchen brengen we de echte smaken van Thailand naar je tafel. Onze chefs gebruiken traditionele recepten en verse ingrediënten om gerechten te maken die je direct naar Bangkok en Koh Samui brengen."
     },
     "menu": {
-        "pageTitle": "Ons Menu",
-        "pageSubtitle": "Authentieke Thaise Keuken",
-        "description": "Ontdek ons uitgebreide menu van authentieke Thaise gerechten, bereid met traditionele recepten en de meest verse ingrediënten. Alle gerechten kunnen worden aangepast aan uw gewenste pittigheid.",
-        "loading": "Inhoud laden...",
-        "categories": {
-            "main": "Hoofdgerechten",
-            "fried": "Gefrituurde Gerechten",
-            "drinks": "Dranken",
-            "extras": "Extra's",
-            "dessert": "Dessert"
-        },
-        "dishes": {
-            "padThai": "Pad Thai",
-            "padThaiDesc": "Lente-uitjes, taugé",
-            "greenCurry": "Groene Curry",
-            "greenCurryDesc": "Aardappelen, broccoli, paprika",
-            "massamanCurry": "Massaman Curry",
-            "massamanCurryDesc": "Aardappelen, pinda's, paprika",
-            "tomYum": "Tom Yum",
-            "tomYumDesc": "Lente-uitjes, koriander, champignons, tomaten",
-            "stirFriedBeef": "Roerbak rundvlees in oestersaus",
-            "stirFriedBeefDesc": "Wortels, uien",
-            "stirFriedBroccoli": "Roerbak Broccoli (vegan)",
-            "stirFriedBroccoliDesc": "Broccoli, wortels, knoflook",
-            "friedRice": "Gebakken rijst",
-            "friedRiceDesc": "Ei, gekookte uien, wortels, uien",
-            "stirFriedChicken": "Roerbak Kip met Cashewnoten",
-            "stirFriedChickenDesc": "Cashewnoten, uien, wortels",
-            "sweetChicken": "Zoete Kip",
-            "papayaSalad": "Papaya Salade",
-            "rice": "Rijst",
-            "springRolls": "Loempia's (vegan)",
-            "springRollsDesc": "6 stuks",
-            "friedBagDumplings": "Gefrituurde Dumplings",
-            "friedBagDumplingsDesc": "6 stuks",
-            "honeyBakedChicken": "Honing Gebakken Kip",
-            "honeyBakedChickenDesc": "6 stuks",
-            "omelette": "Omelet",
-            "friedMushrooms": "Gefrituurde Champignons",
-            "chaThai": "Thaise Thee",
-            "pinkMilk": "Roze Melk",
-            "coconut": "Kokosnoot",
-            "mangoStickyRice": "Mango Kleefrijst"
-        },
-        "dishChoices": {
-            "chicken": "Kip",
-            "pork": "Varkensvlees",
-            "beef": "Rundvlees",
-            "shrimp": "Garnalen",
-            "seafood": "Zeevruchten",
-            "vegan": "Veganistisch",
-            "choice": "Keuze uit"
-        }
+      "title": "Populair Gerecht",
+      "subtitle": "Klassieke smaken die je moet proberen"
     },
-    "footer": {
-        "brand": {
-            "tagline": "Authentieke Thaise smaken bij u aan huis."
-        },
-        "hours": {
-            "title": "Openingstijden",
-            "weekdays": "Maandag - Vrijdag:",
-            "weekends": "Zaterdag - Zondag:"
-        },
-        "contact": {
-            "title": "Contacteer Ons",
-            "phone": "Telefoon",
-            "email": "E-mail"
-        },
-        "copyright": "Alle rechten voorbehouden."
+    "testimonials": {
+      "title": "Wat onze klanten zeggen"
     }
+  },
+  "contact": {
+    "pageTitle": "Contacteer Ons",
+    "pageSubtitle": "We zouden graag van u horen.",
+    "info": {
+      "title": "Contactgegevens",
+      "address": "Adres",
+      "phone": "Telefoon",
+      "email": "E-mail"
+    },
+    "hours": {
+      "title": "Openingstijden",
+      "weekdays": "Maandag - Vrijdag:",
+      "weekends": "Zaterdag - Zondag:"
+    },
+    "form": {
+      "title": "Neem contact met ons op",
+      "name": "Naam",
+      "email": "E-mail",
+      "subject": "Onderwerp",
+      "message": "Bericht",
+      "submit": "Verzenden",
+      "success": "Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.",
+      "options": {
+        "generalInquiry": "Algemene Vraag",
+        "reservation": "Reservatie",
+        "feedback": "Feedback",
+        "catering": "Catering",
+        "other": "Anders"
+      }
+    },
+    "mapTitle": "Vind ons op de kaart"
+  },
+  "menu": {
+    "pageTitle": "Ons Menu",
+    "pageSubtitle": "Authentieke Thaise Keuken",
+    "description": "Ontdek ons uitgebreide menu van authentieke Thaise gerechten, bereid met traditionele recepten en de meest verse ingrediënten. Alle gerechten kunnen worden aangepast aan uw gewenste pittigheid.",
+    "loading": "Inhoud laden...",
+    "categories": {
+      "main": "Hoofdgerechten",
+      "fried": "Gefrituurde Gerechten",
+      "drinks": "Dranken",
+      "extras": "Extra's",
+      "dessert": "Dessert"
+    },
+    "dishes": {
+      "padThai": "Pad Thai",
+      "padThaiDesc": "Lente-uitjes, taugé",
+      "greenCurry": "Groene Curry",
+      "greenCurryDesc": "Aardappelen, broccoli, paprika",
+      "massamanCurry": "Massaman Curry",
+      "massamanCurryDesc": "Aardappelen, pinda's, paprika",
+      "tomYum": "Tom Yum",
+      "tomYumDesc": "Lente-uitjes, koriander, champignons, tomaten",
+      "stirFriedBeef": "Roerbak rundvlees in oestersaus",
+      "stirFriedBeefDesc": "Wortels, uien",
+      "stirFriedBroccoli": "Roerbak Broccoli (vegan)",
+      "stirFriedBroccoliDesc": "Broccoli, wortels, knoflook",
+      "friedRice": "Gebakken rijst",
+      "friedRiceDesc": "Ei, gekookte uien, wortels, uien",
+      "stirFriedChicken": "Roerbak Kip met Cashewnoten",
+      "stirFriedChickenDesc": "Cashewnoten, uien, wortels",
+      "sweetChicken": "Zoete Kip",
+      "papayaSalad": "Papaya Salade",
+      "rice": "Rijst",
+      "springRolls": "Loempia's (vegan)",
+      "springRollsDesc": "6 stuks",
+      "friedBagDumplings": "Gefrituurde Dumplings",
+      "friedBagDumplingsDesc": "6 stuks",
+      "honeyBakedChicken": "Honing Gebakken Kip",
+      "honeyBakedChickenDesc": "6 stuks",
+      "omelette": "Omelet",
+      "friedMushrooms": "Gefrituurde Champignons",
+      "chaThai": "Thaise Thee",
+      "pinkMilk": "Roze Melk",
+      "coconut": "Kokosnoot",
+      "mangoStickyRice": "Mango Kleefrijst"
+    },
+    "dishChoices": {
+      "chicken": "Kip",
+      "pork": "Varkensvlees",
+      "beef": "Rundvlees",
+      "shrimp": "Garnalen",
+      "seafood": "Zeevruchten",
+      "vegan": "Veganistisch",
+      "choice": "Keuze uit"
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "Authentieke Thaise smaken bij u aan huis."
+    },
+    "hours": {
+      "title": "Openingstijden",
+      "weekdays": "Maandag - Vrijdag:",
+      "weekends": "Zaterdag - Zondag:"
+    },
+    "contact": {
+      "title": "Contacteer Ons",
+      "phone": "Telefoon",
+      "email": "E-mail"
+    },
+    "copyright": "Alle rechten voorbehouden."
+  }
 }

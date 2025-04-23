@@ -1,4 +1,4 @@
-import type { PageHeader } from './common.types';
+import type { PageHeader } from "./common.types";
 
 export type DishChoice = "chicken" | "shrimp" | "pork" | "beef" | "seafood" | "vegan";
 
@@ -19,4 +19,4 @@ export interface MenuCategory {
 export interface MenuContent {
   pageHeader: PageHeader;
   categories: MenuCategory[];
-} 
+}

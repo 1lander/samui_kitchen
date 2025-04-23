@@ -1,23 +1,23 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+  import { onMounted, ref } from "vue";
 
-defineProps({
-  position: {
-    type: Array,
-    required: true
-  }
-});
+  defineProps({
+    position: {
+      type: Array,
+      required: true
+    }
+  });
 
-const markerIcon = ref(null);
+  const markerIcon = ref(null);
 
-onMounted(() => {
-  // Import Leaflet dynamically on the client side only
-  if (import.meta.client) {
-    import('leaflet').then(L => {
-      // Thai flag marker icon in pin shape
-      markerIcon.value = L.divIcon({
-        className: 'thai-flag-marker',
-        html: `<div class="pin-container">
+  onMounted(() => {
+    // Import Leaflet dynamically on the client side only
+    if (import.meta.client) {
+      import("leaflet").then((L) => {
+        // Thai flag marker icon in pin shape
+        markerIcon.value = L.divIcon({
+          className: "thai-flag-marker",
+          html: `<div class="pin-container">
                 <svg viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg" class="pin-svg">
                   <!-- Pin shape with drop shadow -->
                   <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
@@ -54,14 +54,14 @@ onMounted(() => {
                   </g>
                 </svg>
               </div>`,
-        iconSize: [40, 60],
-        iconAnchor: [20, 60],
-        popupAnchor: [0, -45],
-        className: 'thai-pin-icon'
+          iconSize: [40, 60],
+          iconAnchor: [20, 60],
+          popupAnchor: [0, -45],
+          className: "thai-pin-icon"
+        });
       });
-    });
-  }
-});
+    }
+  });
 </script>
 
 <template>
@@ -71,22 +71,22 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.thai-flag-marker {
-  background: transparent;
-  border: none;
-}
+  .thai-flag-marker {
+    background: transparent;
+    border: none;
+  }
 
-.pin-container {
-  width: 40px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
+  .pin-container {
+    width: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
 
-.pin-svg {
-  width: 100%;
-  height: 100%;
-}
-</style> 
+  .pin-svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>

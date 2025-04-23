@@ -1,131 +1,131 @@
 {
-    "brand": {
-        "name": "Samui's Kitchen",
-        "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
-    },
-    "header": {
-        "home": "หน้าแรก",
-        "menu": "เมนู",
-        "about": "เกี่ยวกับเรา",
-        "contact": "ติดต่อเรา"
-    },
-    "home": {
-        "pageTitle": "ยินดีต้อนรับเข้าสู่ Samui's Kitchen",
-        "pageSubtitle": "สัมผัสรสชาติแท้ของอาหารไทยในหัวใจของกรุงเทพ",
-        "menuButton": "ดูเมนู",
-        "introduction": {
-            "title": "ยินดีต้อนรับเข้าสู่ Samui Kitchen",
-            "content": "ที่ Samui Kitchen เราเปิดร้านอาหารไทยที่มีรสชาติที่สดใหม่และรสชาติที่คุ้มครองคุณครบทุกคน"
-        },
-        "menu": {
-            "title": "อาหารที่คุณควรลอง",
-            "subtitle": "อาหารที่คุณควรลอง"
-        },
-        "testimonials": {
-            "title": "ความคิดเห็นของลูกค้า"
-        }
-    },
-    "contact": {
-        "pageTitle": "ติดต่อเรา",
-        "pageSubtitle": "เราต้องการรับฟังคุณ",
-        "info": {
-            "title": "ข้อมูลติดต่อ",
-            "address": "ที่อยู่",
-            "phone": "โทรศัพท์",
-            "email": "อีเมล"
-        },
-        "hours": {
-            "title": "เวลาทำการ",
-            "weekdays": "จันทร์ - ศุกร์:",
-            "weekends": "เสาร์ - อาทิตย์:"
-        },
-        "form": {
-            "title": "ติดต่อเรา",
-            "name": "ชื่อ",
-            "email": "อีเมล",
-            "subject": "หัวข้อ",
-            "message": "ข้อความ",
-            "submit": "ส่งข้อมูล",
-            "success": "ข้อความของคุณถูกส่งไปเรียบร้อย เราจะติดต่อคุณเร็วๆ นี้",
-            "options": {
-                "generalInquiry": "คำถามทั่วไป",
-                "reservation": "จองคิว",
-                "feedback": "ความคิดเห็น",
-                "catering": "จัดงาน",
-                "other": "อื่นๆ"
-            }
-        },
-        "mapTitle": "ค้นหาเราในแผนที่"
+  "brand": {
+    "name": "Samui's Kitchen",
+    "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
+  },
+  "header": {
+    "home": "หน้าแรก",
+    "menu": "เมนู",
+    "about": "เกี่ยวกับเรา",
+    "contact": "ติดต่อเรา"
+  },
+  "home": {
+    "pageTitle": "ยินดีต้อนรับเข้าสู่ Samui's Kitchen",
+    "pageSubtitle": "สัมผัสรสชาติแท้ของอาหารไทยในหัวใจของกรุงเทพ",
+    "menuButton": "ดูเมนู",
+    "introduction": {
+      "title": "ยินดีต้อนรับเข้าสู่ Samui Kitchen",
+      "content": "ที่ Samui Kitchen เราเปิดร้านอาหารไทยที่มีรสชาติที่สดใหม่และรสชาติที่คุ้มครองคุณครบทุกคน"
     },
     "menu": {
-        "pageTitle": "เมนูของเรา",
-        "pageSubtitle": "อาหารไทยแท้",
-        "description": "สำรวจเมนูอาหารไทยแท้หลากหลายของเรา ซึ่งปรุงด้วยสูตรดั้งเดิมและวัตถุดิบที่สดใหม่ที่สุด คุณสามารถเลือกระดับความเผ็ดได้ตามต้องการ",
-        "loading": "กำลังโหลดข้อมูล...",
-        "categories": {
-            "main": "อาหารจานหลัก",
-            "fried": "อาหารทอด",
-            "drinks": "เครื่องดื่ม",
-            "extras": "เพิ่มเติม",
-            "dessert": "ของหวาน"
-        },
-        "dishes": {
-            "padThai": "ผัดไทย",
-            "padThaiDesc": "ต้นหอม, ถั่วงอก",
-            "greenCurry": "แกงเขียวหวาน",
-            "greenCurryDesc": "มันฝรั่ง, บร็อคโคลี่, พริกหยวก",
-            "massamanCurry": "แกงมัสมั่น",
-            "massamanCurryDesc": "มันฝรั่ง, ถั่วลิสง, พริกหยวก",
-            "tomYum": "ต้มยำ",
-            "tomYumDesc": "ต้นหอม, ผักชี, เห็ด, มะเขือเทศ",
-            "stirFriedBeef": "เนื้อผัดน้ำมันหอย",
-            "stirFriedBeefDesc": "แครอท, หัวหอม",
-            "stirFriedBroccoli": "บร็อคโคลี่ผัด (มังสวิรัติ)",
-            "stirFriedBroccoliDesc": "บร็อคโคลี่, แครอท, กระเทียม",
-            "friedRice": "ข้าวผัด",
-            "friedRiceDesc": "ไข่, หัวหอมต้ม, แครอท, หัวหอม",
-            "stirFriedChicken": "ไก่ผัดเม็ดมะม่วงหิมพานต์",
-            "stirFriedChickenDesc": "เม็ดมะม่วงหิมพานต์, หัวหอม, แครอท",
-            "sweetChicken": "ไก่หวาน",
-            "papayaSalad": "ส้มตำ",
-            "rice": "ข้าวสวย",
-            "springRolls": "ปอเปี๊ยะทอด (มังสวิรัติ)",
-            "springRollsDesc": "6 ชิ้น",
-            "friedBagDumplings": "เกี๊ยวซ่าทอด",
-            "friedBagDumplingsDesc": "6 ชิ้น",
-            "honeyBakedChicken": "ไก่อบน้ำผึ้ง",
-            "honeyBakedChickenDesc": "6 ชิ้น",
-            "omelette": "ไข่เจียว",
-            "friedMushrooms": "เห็ดทอด",
-            "chaThai": "ชาไทย",
-            "pinkMilk": "นมชมพู",
-            "coconut": "มะพร้าว",
-            "mangoStickyRice": "ข้าวเหนียวมะม่วง"
-        },
-        "dishChoices": {
-            "chicken": "ไก่",
-            "pork": "หมู",
-            "beef": "เนื้อ",
-            "shrimp": "กุ้ง",
-            "seafood": "ทะเล",
-            "vegan": "มังสวิรัติ",
-            "choice": "เลือก"
-        }
+      "title": "อาหารที่คุณควรลอง",
+      "subtitle": "อาหารที่คุณควรลอง"
     },
-    "footer": {
-        "brand": {
-            "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
-        },
-        "hours": {
-            "title": "เวลาทำการ",
-            "weekdays": "จันทร์ - ศุกร์:",
-            "weekends": "เสาร์ - อาทิตย์:"
-        },
-        "contact": {
-            "title": "ติดต่อเรา",
-            "phone": "โทรศัพท์",
-            "email": "อีเมล"
-        },
-        "copyright": "สงวนลิขสิทธิ์ทั้งหมด"
+    "testimonials": {
+      "title": "ความคิดเห็นของลูกค้า"
     }
+  },
+  "contact": {
+    "pageTitle": "ติดต่อเรา",
+    "pageSubtitle": "เราต้องการรับฟังคุณ",
+    "info": {
+      "title": "ข้อมูลติดต่อ",
+      "address": "ที่อยู่",
+      "phone": "โทรศัพท์",
+      "email": "อีเมล"
+    },
+    "hours": {
+      "title": "เวลาทำการ",
+      "weekdays": "จันทร์ - ศุกร์:",
+      "weekends": "เสาร์ - อาทิตย์:"
+    },
+    "form": {
+      "title": "ติดต่อเรา",
+      "name": "ชื่อ",
+      "email": "อีเมล",
+      "subject": "หัวข้อ",
+      "message": "ข้อความ",
+      "submit": "ส่งข้อมูล",
+      "success": "ข้อความของคุณถูกส่งไปเรียบร้อย เราจะติดต่อคุณเร็วๆ นี้",
+      "options": {
+        "generalInquiry": "คำถามทั่วไป",
+        "reservation": "จองคิว",
+        "feedback": "ความคิดเห็น",
+        "catering": "จัดงาน",
+        "other": "อื่นๆ"
+      }
+    },
+    "mapTitle": "ค้นหาเราในแผนที่"
+  },
+  "menu": {
+    "pageTitle": "เมนูของเรา",
+    "pageSubtitle": "อาหารไทยแท้",
+    "description": "สำรวจเมนูอาหารไทยแท้หลากหลายของเรา ซึ่งปรุงด้วยสูตรดั้งเดิมและวัตถุดิบที่สดใหม่ที่สุด คุณสามารถเลือกระดับความเผ็ดได้ตามต้องการ",
+    "loading": "กำลังโหลดข้อมูล...",
+    "categories": {
+      "main": "อาหารจานหลัก",
+      "fried": "อาหารทอด",
+      "drinks": "เครื่องดื่ม",
+      "extras": "เพิ่มเติม",
+      "dessert": "ของหวาน"
+    },
+    "dishes": {
+      "padThai": "ผัดไทย",
+      "padThaiDesc": "ต้นหอม, ถั่วงอก",
+      "greenCurry": "แกงเขียวหวาน",
+      "greenCurryDesc": "มันฝรั่ง, บร็อคโคลี่, พริกหยวก",
+      "massamanCurry": "แกงมัสมั่น",
+      "massamanCurryDesc": "มันฝรั่ง, ถั่วลิสง, พริกหยวก",
+      "tomYum": "ต้มยำ",
+      "tomYumDesc": "ต้นหอม, ผักชี, เห็ด, มะเขือเทศ",
+      "stirFriedBeef": "เนื้อผัดน้ำมันหอย",
+      "stirFriedBeefDesc": "แครอท, หัวหอม",
+      "stirFriedBroccoli": "บร็อคโคลี่ผัด (มังสวิรัติ)",
+      "stirFriedBroccoliDesc": "บร็อคโคลี่, แครอท, กระเทียม",
+      "friedRice": "ข้าวผัด",
+      "friedRiceDesc": "ไข่, หัวหอมต้ม, แครอท, หัวหอม",
+      "stirFriedChicken": "ไก่ผัดเม็ดมะม่วงหิมพานต์",
+      "stirFriedChickenDesc": "เม็ดมะม่วงหิมพานต์, หัวหอม, แครอท",
+      "sweetChicken": "ไก่หวาน",
+      "papayaSalad": "ส้มตำ",
+      "rice": "ข้าวสวย",
+      "springRolls": "ปอเปี๊ยะทอด (มังสวิรัติ)",
+      "springRollsDesc": "6 ชิ้น",
+      "friedBagDumplings": "เกี๊ยวซ่าทอด",
+      "friedBagDumplingsDesc": "6 ชิ้น",
+      "honeyBakedChicken": "ไก่อบน้ำผึ้ง",
+      "honeyBakedChickenDesc": "6 ชิ้น",
+      "omelette": "ไข่เจียว",
+      "friedMushrooms": "เห็ดทอด",
+      "chaThai": "ชาไทย",
+      "pinkMilk": "นมชมพู",
+      "coconut": "มะพร้าว",
+      "mangoStickyRice": "ข้าวเหนียวมะม่วง"
+    },
+    "dishChoices": {
+      "chicken": "ไก่",
+      "pork": "หมู",
+      "beef": "เนื้อ",
+      "shrimp": "กุ้ง",
+      "seafood": "ทะเล",
+      "vegan": "มังสวิรัติ",
+      "choice": "เลือก"
+    }
+  },
+  "footer": {
+    "brand": {
+      "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
+    },
+    "hours": {
+      "title": "เวลาทำการ",
+      "weekdays": "จันทร์ - ศุกร์:",
+      "weekends": "เสาร์ - อาทิตย์:"
+    },
+    "contact": {
+      "title": "ติดต่อเรา",
+      "phone": "โทรศัพท์",
+      "email": "อีเมล"
+    },
+    "copyright": "สงวนลิขสิทธิ์ทั้งหมด"
+  }
 }

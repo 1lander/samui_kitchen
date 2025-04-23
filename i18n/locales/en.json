@@ -1,128 +1,128 @@
 {
-    "brand": {
-        "name": "Samui's Kitchen",
-        "tagline": "Bringing the authentic flavors of Thailand to your doorstep."
-    },
-    "header": {
-        "home": "Home",
-        "menu": "Menu",
-        "about": "About Us",
-        "contact": "Contact"
-    },
-    "home": {
-        "pageTitle": "Welcome to Samui's Kitchen",
-        "pageSubtitle": "Experience the authentic flavors of Thailand in the heart of Antwerp",
-        "menuButton": "View Menu",
-        "introduction": {
-            "title": "Welcome to Samui Kitchen",
-            "content": "At Samui Kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui."
-        },
-        "menu": {
-            "title": "Popular Dishes",
-            "subtitle": "Customer favorites you must try"
-        },
-        "testimonials": {
-            "title": "What Our Customers Say"
-        }
-    },
-    "contact": {
-        "pageTitle": "Contact Us",
-        "pageSubtitle": "We'd Love to Hear From You",
-        "info": {
-            "title": "Contact Information",
-            "address": "Address",
-            "phone": "Phone",
-            "email": "Email"
-        },
-        "hours": {
-            "title": "Opening Hours",
-            "weekdays": "Monday - Friday:",
-            "weekends": "Saturday - Sunday:"
-        },
-        "form": {
-            "title": "Get in Touch",
-            "name": "Name",
-            "email": "Email",
-            "subject": "Subject",
-            "message": "Message",
-            "submit": "Submit",
-            "success": "Thank you for your message! We'll get back to you soon.",
-            "options": {
-                "generalInquiry": "General Inquiry",
-                "reservation": "Reservation",
-                "feedback": "Feedback",
-                "catering": "Catering",
-                "other": "Other"
-            }
-        },
-        "mapTitle": "Find Us on the Map"
+  "brand": {
+    "name": "Samui's Kitchen",
+    "tagline": "Bringing the authentic flavors of Thailand to your doorstep."
+  },
+  "header": {
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About Us",
+    "contact": "Contact"
+  },
+  "home": {
+    "pageTitle": "Welcome to Samui's Kitchen",
+    "pageSubtitle": "Experience the authentic flavors of Thailand in the heart of Antwerp",
+    "menuButton": "View Menu",
+    "introduction": {
+      "title": "Welcome to Samui Kitchen",
+      "content": "At Samui Kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui."
     },
     "menu": {
-        "pageTitle": "Our Menu",
-        "pageSubtitle": "Authentic Thai Cuisine",
-        "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
-        "loading": "Loading content...",
-        "categories": {
-            "main": "Main Dishes",
-            "fried": "Fried Food",
-            "drinks": "Drinks",
-            "extras": "Extras",
-            "dessert": "Dessert"
-        },
-        "dishes": {
-            "padThai": "Pad Thai",
-            "padThaiDesc": "Scallions, bean sprouts",
-            "greenCurry": "Green Curry",
-            "greenCurryDesc": "Potatoes, broccoli, bell peppers",
-            "massamanCurry": "Massaman Curry",
-            "massamanCurryDesc": "Potatoes, Peanuts, bell peppers",
-            "tomYum": "Tom Yum",
-            "tomYumDesc": "Scallions, coriander, mushrooms, tomatoes",
-            "stirFriedBeef": "Stir-fried beef Oyster sauce",
-            "stirFriedBeefDesc": "Carrots, onions",
-            "stirFriedBroccoli": "Stir-fried Broccoli (vegan)",
-            "stirFriedBroccoliDesc": "Broccoli, carrots, garlic",
-            "friedRice": "Fried rice",
-            "friedRiceDesc": "Egg, boiled onions, carrots, onions",
-            "stirFriedChicken": "Stir-fried Chicken Cashew nuts",
-            "stirFriedChickenDesc": "Cashew nuts, onions, carrots",
-            "sweetChicken": "Sweet Chicken",
-            "papayaSalad": "Papaya Salad",
-            "rice": "Rice",
-            "springRolls": "Spring Rolls (vegan)",
-            "springRollsDesc": "6 pieces",
-            "friedBagDumplings": "Fried Bag Dumplings",
-            "friedBagDumplingsDesc": "6 pieces",
-            "honeyBakedChicken": "Honey Baked Chicken",
-            "honeyBakedChickenDesc": "6 pieces",
-            "omelette": "Omelette",
-            "friedMushrooms": "Fried Mushrooms",
-            "chaThai": "Cha Thai",
-            "pinkMilk": "Pink Milk",
-            "coconut": "Coconut",
-            "mangoStickyRice": "Mango Sticky Rice"
-        },
-        "dishChoices": {
-            "chicken": "Chicken",
-            "pork": "Pork",
-            "beef": "Beef",
-            "shrimp": "Shrimp",
-            "seafood": "Seafood",
-            "vegan": "Vegan",
-            "choice": "Choice of"
-        }
+      "title": "Popular Dishes",
+      "subtitle": "Customer favorites you must try"
     },
-    "footer": {
-        "hours": {
-            "title": "Opening Hours",
-            "weekdays": "Monday - Friday:",
-            "weekends": "Saturday - Sunday:"
-        },
-        "contact": {
-            "title": "Contact Us",
-            "phone": "Phone",
-            "email": "Email"
-        },
-        "copyright": "All rights reserved."
+    "testimonials": {
+      "title": "What Our Customers Say"
     }
+  },
+  "contact": {
+    "pageTitle": "Contact Us",
+    "pageSubtitle": "We'd Love to Hear From You",
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday:",
+      "weekends": "Saturday - Sunday:"
+    },
+    "form": {
+      "title": "Get in Touch",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Submit",
+      "success": "Thank you for your message! We'll get back to you soon.",
+      "options": {
+        "generalInquiry": "General Inquiry",
+        "reservation": "Reservation",
+        "feedback": "Feedback",
+        "catering": "Catering",
+        "other": "Other"
+      }
+    },
+    "mapTitle": "Find Us on the Map"
+  },
+  "menu": {
+    "pageTitle": "Our Menu",
+    "pageSubtitle": "Authentic Thai Cuisine",
+    "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
+    "loading": "Loading content...",
+    "categories": {
+      "main": "Main Dishes",
+      "fried": "Fried Food",
+      "drinks": "Drinks",
+      "extras": "Extras",
+      "dessert": "Dessert"
+    },
+    "dishes": {
+      "padThai": "Pad Thai",
+      "padThaiDesc": "Scallions, bean sprouts",
+      "greenCurry": "Green Curry",
+      "greenCurryDesc": "Potatoes, broccoli, bell peppers",
+      "massamanCurry": "Massaman Curry",
+      "massamanCurryDesc": "Potatoes, Peanuts, bell peppers",
+      "tomYum": "Tom Yum",
+      "tomYumDesc": "Scallions, coriander, mushrooms, tomatoes",
+      "stirFriedBeef": "Stir-fried beef Oyster sauce",
+      "stirFriedBeefDesc": "Carrots, onions",
+      "stirFriedBroccoli": "Stir-fried Broccoli (vegan)",
+      "stirFriedBroccoliDesc": "Broccoli, carrots, garlic",
+      "friedRice": "Fried rice",
+      "friedRiceDesc": "Egg, boiled onions, carrots, onions",
+      "stirFriedChicken": "Stir-fried Chicken Cashew nuts",
+      "stirFriedChickenDesc": "Cashew nuts, onions, carrots",
+      "sweetChicken": "Sweet Chicken",
+      "papayaSalad": "Papaya Salad",
+      "rice": "Rice",
+      "springRolls": "Spring Rolls (vegan)",
+      "springRollsDesc": "6 pieces",
+      "friedBagDumplings": "Fried Bag Dumplings",
+      "friedBagDumplingsDesc": "6 pieces",
+      "honeyBakedChicken": "Honey Baked Chicken",
+      "honeyBakedChickenDesc": "6 pieces",
+      "omelette": "Omelette",
+      "friedMushrooms": "Fried Mushrooms",
+      "chaThai": "Cha Thai",
+      "pinkMilk": "Pink Milk",
+      "coconut": "Coconut",
+      "mangoStickyRice": "Mango Sticky Rice"
+    },
+    "dishChoices": {
+      "chicken": "Chicken",
+      "pork": "Pork",
+      "beef": "Beef",
+      "shrimp": "Shrimp",
+      "seafood": "Seafood",
+      "vegan": "Vegan",
+      "choice": "Choice of"
+    }
+  },
+  "footer": {
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday:",
+      "weekends": "Saturday - Sunday:"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "Phone",
+      "email": "Email"
+    },
+    "copyright": "All rights reserved."
+  }
 }

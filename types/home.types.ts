@@ -27,4 +27,4 @@ export interface HomeContent {
   introduction: Introduction;
   features: Feature[];
   testimonials: TestimonialSection;
-} 
+}

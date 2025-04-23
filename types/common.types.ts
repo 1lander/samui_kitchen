@@ -4,4 +4,4 @@
 
 export interface PageHeader {
   image: string;
-} 
+}

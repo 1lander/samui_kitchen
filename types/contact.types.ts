@@ -1,4 +1,4 @@
-import type { PageHeader } from './common.types';
+import type { PageHeader } from "./common.types";
 
 export interface SocialLink {
   platform: string;
@@ -40,4 +40,4 @@ export interface ContactContent {
   hours: Hours;
   formFields: FormField[];
   location: MapLocation;
-} 
+}

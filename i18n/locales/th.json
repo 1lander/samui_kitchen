@@ -112,10 +112,40 @@
       "choice": "เลือก"
     }
   },
-  "footer": {
-    "brand": {
-      "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
+  "order": {
+    "pageTitle": "สั่งอาหาร",
+    "pageSubtitle": "สั่งอาหารของคุณ",
+    "yourOrder": "รายการสั่งซื้อของคุณ",
+    "emptyCart": "รายการสั่งซื้อของคุณว่างเปล่า",
+    "addToOrder": "เพิ่มเข้าไปในรายการสั่งซื้อ",
+    "viewOrder": "ดูรายการสั่งซื้อ",
+    "checkout": "ชำระเงิน",
+    "clearOrder": "ล้างรายการสั่งซื้อ",
+    "subtotal": "ยอดรวม",
+    "total": "ราคารวม",
+    "specialRequests": "คำขอพิเศษ",
+    "notesPlaceholder": "คำขอพิเศษสำหรับอาหารนี้",
+    "selectItems": "เลือกอาหาร",
+    "andMoreItems": "+ {count} อาหารที่เหลือ",
+    "deliveryOption": {
+      "title": "ตัวเลือกการจัดส่ง",
+      "pickup": "รับสินค้า",
+      "delivery": "จัดส่ง"
     },
+    "customerInfo": {
+      "title": "ข้อมูลลูกค้า",
+      "name": "ชื่อ",
+      "phone": "เบอร์โทรศัพท์",
+      "address": "ที่อยู่",
+      "submit": "สั่งอาหาร"
+    }
+  },
+  "common": {
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "remove": "ลบ"
+  },
+  "footer": {
     "hours": {
       "title": "เวลาทำการ",
       "weekdays": "จันทร์ - ศุกร์:",

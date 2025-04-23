@@ -62,6 +62,7 @@
     "pageSubtitle": "Authentieke Thaise Keuken",
     "description": "Ontdek ons uitgebreide menu van authentieke Thaise gerechten, bereid met traditionele recepten en de meest verse ingrediënten. Alle gerechten kunnen worden aangepast aan uw gewenste pittigheid.",
     "loading": "Inhoud laden...",
+    "noItems": "Geen gerechten gevonden",
     "categories": {
       "main": "Hoofdgerechten",
       "fried": "Gefrituurde Gerechten",
@@ -112,10 +113,40 @@
       "choice": "Keuze uit"
     }
   },
-  "footer": {
-    "brand": {
-      "tagline": "Authentieke Thaise smaken bij u aan huis."
+  "order": {
+    "pageTitle": "Bestel",
+    "pageSubtitle": "Bestel uw favoriete gerechten",
+    "yourOrder": "Uw bestelling",
+    "emptyCart": "Uw winkelwagen is leeg",
+    "addToOrder": "Toevoegen aan bestelling",
+    "viewOrder": "Bekijk bestelling",
+    "checkout": "Afrekenen",
+    "clearOrder": "Alles wissen",
+    "subtotal": "Subtotaal",
+    "total": "Totaal",
+    "specialRequests": "Speciale wensen",
+    "notesPlaceholder": "Speciale wensen voor dit gerecht?",
+    "selectItems": "Selecteer gerechten",
+    "andMoreItems": "+ {count} meer",
+    "deliveryOption": {
+      "title": "Leveringsoptie",
+      "pickup": "Afhalen",
+      "delivery": "Levering"
     },
+    "customerInfo": {
+      "title": "Klantgegevens",
+      "name": "Naam",
+      "phone": "Telefoon",
+      "address": "Leveringsadres",
+      "submit": "Bestel"
+    }
+  },
+  "common": {
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "remove": "Verwijderen"
+  },
+  "footer": {
     "hours": {
       "title": "Openingstijden",
       "weekdays": "Maandag - Vrijdag:",

@@ -6,7 +6,7 @@ const { data } = await useAsyncData(() => queryContent<OrderContent>("/order").f
 const order = computed(() => data.value);
 useSeoMeta({
   title: t("order.pageTitle") + " - Samui Kitchen",
-  description: t("order.pageDescription")
+  description: t("order.pageSubtitle")
 });
 </script>
 

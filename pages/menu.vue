@@ -105,7 +105,6 @@
     </div>
 
     <!-- Order Widget -->
-    <OrderWidget />
   </div>
 
   <div v-else class="py-12 text-center">

@@ -168,6 +168,8 @@
       <slot />
     </main>
 
+    <OrderWidget v-if="!$route.path.includes('/order')" />
+
     <CustomFooter />
   </div>
 </template>

@@ -1,35 +1,42 @@
 <script setup lang="ts">
-const { t } = useI18n();
+  import type { MenuItem } from "~/types";
+  const { t } = useI18n();
 
-defineProps<{
-  selectedItem: {
-    name: string;
-    price: number;
-    dishChoices?: string[];
-  } | null;
-  selectedDishChoice: string | null;
-  itemNotes: string;
-}>();
+  const props = defineProps<{
+    item: MenuItem | null;
+  }>();
 
-const emit = defineEmits<{
-  close: [];
-  updateDishChoice: [choice: string];
-  updateNotes: [notes: string];
-  addToOrder: [];
-}>();
+  const emit = defineEmits<{
+    close: [];
+    addItem: [{ name: string; price: number; dishChoice?: string; notes?: string }];
+  }>();
+
+  const selectedDishChoice = ref<string | null>(null);
+  const itemNotes = ref("");
+
+  function addToOrder() {
+    if (props.item) {
+      emit("addItem", {
+        name: props.item.name,
+        price: props.item.price,
+        dishChoice: selectedDishChoice.value || undefined,
+        notes: itemNotes.value || undefined
+      });
+    }
+  }
 </script>
 
 <template>
-  <div v-if="selectedItem" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
+  <div v-if="item" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4">
     <div class="w-full max-w-md rounded-lg bg-white p-6">
-      <h3 class="mb-2 text-xl font-bold">{{ t(selectedItem.name) }}</h3>
+      <h3 class="mb-2 text-xl font-bold">{{ t(item.name) }}</h3>
 
-      <div v-if="selectedItem.dishChoices && selectedItem.dishChoices.length > 0" class="mb-4">
+      <div v-if="item.dishChoices && item.dishChoices.length > 0" class="mb-4">
         <div class="flex flex-wrap gap-2">
           <button
-            v-for="choice in selectedItem.dishChoices"
+            v-for="choice in item.dishChoices"
             :key="choice"
-            @click="emit('updateDishChoice', choice)"
+            @click="selectedDishChoice = choice"
             class="rounded-full border px-3 py-1"
             :class="[
               selectedDishChoice === choice
@@ -46,8 +53,7 @@ const emit = defineEmits<{
         <label for="notes" class="mb-2 block font-medium">{{ t("order.specialRequests") }}</label>
         <textarea
           id="notes"
-          :value="itemNotes"
-          @input="emit('updateNotes', ($event.target as HTMLTextAreaElement).value)"
+          v-model="itemNotes"
           rows="2"
           class="w-full rounded-md border border-gray-300 p-2"
           :placeholder="t('order.notesPlaceholder')"
@@ -61,8 +67,8 @@ const emit = defineEmits<{
         >
           {{ t("common.cancel") }}
         </button>
-        <button @click="emit('addToOrder')" class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white">
-          {{ t("order.addToOrder") }} - € {{ selectedItem.price.toFixed(2) }}
+        <button @click="addToOrder" class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white">
+          {{ t("order.addToOrder") }} - € {{ item.price.toFixed(2) }}
         </button>
       </div>
     </div>

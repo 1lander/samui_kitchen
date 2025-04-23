@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import { useOrderStore } from "~/stores/order";
-  import type { MenuContent } from "~/types";
+  import type { MenuContent, MenuItem } from "~/types";
 
   const { t } = useI18n();
   const orderStore = useOrderStore();
@@ -9,42 +9,32 @@
   const { data } = await useAsyncData(() => queryContent<MenuContent>("menu").findOne());
   const menu = computed(() => data.value);
 
-  // State for item selection and customization
-  const selectedItem = ref<{
-    name: string;
-    price: number;
-    dishChoices?: string[];
-  } | null>(null);
-  const selectedDishChoice = ref<string | null>(null);
-  const itemNotes = ref("");
+  const selectedItem = ref<MenuItem | null>(null);
 
-  // Select an item to customize before adding to cart
-  function selectItem(item: any) {
+  function selectItem(item: MenuItem) {
     selectedItem.value = {
       name: item.name,
       price: item.price,
       dishChoices: item.dishChoices
     };
-
-    // Reset selections
-    selectedDishChoice.value = item.dishChoices && item.dishChoices.length > 0 ? item.dishChoices[0] : null;
-    itemNotes.value = "";
   }
 
-  // Add the selected item to the order
-  function addToOrder() {
-    if (selectedItem.value) {
-      orderStore.addItem(
-        {
-          name: selectedItem.value.name,
-          price: selectedItem.value.price
-        },
-        selectedDishChoice.value || undefined,
-        itemNotes.value || undefined
-      );
+  function handleAddItem(itemData: { 
+    name: string; 
+    price: number; 
+    dishChoice?: string; 
+    notes?: string;
+  }) {
+    orderStore.addItem(
+      {
+        name: itemData.name,
+        price: itemData.price
+      },
+      itemData.dishChoice,
+      itemData.notes
+    );
 
-      selectedItem.value = null;
-    }
+    selectedItem.value = null;
   }
 
   useSeoMeta({
@@ -84,12 +74,8 @@
   </div>
 
   <MenuItemSelectModal 
-    :selected-item="selectedItem"
-    :selected-dish-choice="selectedDishChoice"
-    :item-notes="itemNotes"
+    :item="selectedItem"
     @close="selectedItem = null"
-    @update-dish-choice="selectedDishChoice = $event"
-    @update-notes="itemNotes = $event"
-    @add-to-order="addToOrder"
+    @add-item="handleAddItem"
   />
 </template>

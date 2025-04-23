@@ -6,8 +6,8 @@
   "header": {
     "home": "Home",
     "menu": "Menu",
-    "about": "About Us",
-    "contact": "Contact"
+    "contact": "Contact",
+    "order": "Order"
   },
   "home": {
     "pageTitle": "Welcome to Samui's Kitchen",
@@ -62,6 +62,7 @@
     "pageSubtitle": "Authentic Thai Cuisine",
     "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
     "loading": "Loading content...",
+    "noItems": "No items found",
     "categories": {
       "main": "Main Dishes",
       "fried": "Fried Food",
@@ -111,6 +112,40 @@
       "vegan": "Vegan",
       "choice": "Choice of"
     }
+  },
+  "order": {
+    "pageTitle": "Your Order",
+    "pageSubtitle": "Select and customize your favorite dishes",
+    "pageDescription": "Create your perfect meal from our authentic Thai menu",
+    "yourOrder": "Your Order",
+    "emptyCart": "Your cart is empty",
+    "addToOrder": "Add to Order",
+    "viewOrder": "View Order",
+    "checkout": "Checkout",
+    "clearOrder": "Clear All",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "specialRequests": "Special Requests",
+    "notesPlaceholder": "Any special requests for this dish?",
+    "selectItems": "Select Menu Items",
+    "andMoreItems": "+ {count} more",
+    "deliveryOption": {
+      "title": "Delivery Option",
+      "pickup": "Pickup",
+      "delivery": "Delivery"
+    },
+    "customerInfo": {
+      "title": "Customer Information",
+      "name": "Name",
+      "phone": "Phone Number",
+      "address": "Delivery Address",
+      "submit": "Place Order"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "remove": "Remove"
   },
   "footer": {
     "hours": {

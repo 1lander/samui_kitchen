@@ -1,5 +1,6 @@
 <script setup>
   const { locales, locale, setLocale } = useI18n();
+  const { t } = useI18n();
 
   const flagEmoji = {
     nl: "🇧🇪",
@@ -11,10 +12,8 @@
     setLocale(event.target.value);
   };
 
-  // Mobile menu state
   const isMobileMenuOpen = ref(false);
 
-  // Toggle mobile menu
   const toggleMobileMenu = () => {
     isMobileMenuOpen.value = !isMobileMenuOpen.value;
     if (isMobileMenuOpen.value) {
@@ -23,6 +22,25 @@
       document.body.classList.remove("overflow-hidden");
     }
   };
+
+  const links = [
+    {
+      name: t("header.home"),
+      path: "/"
+    },
+    {
+      name: t("header.menu"),
+      path: "/menu"
+    },
+    {
+      name: t("header.contact"),
+      path: "/contact"
+    },
+    {
+      name: t("header.order"),
+      path: "/order"
+    }
+  ];
 </script>
 
 <template>
@@ -34,33 +52,22 @@
             <NuxtLink to="/" class="font-medium transition hover:text-secondary">
               <NuxtImg src="/img/logo.png" alt="Koh Samui Kitchen Logo" class="h-24" />
             </NuxtLink>
-
             <div>
               <h1 class="text-2xl font-bold leading-none text-primary md:text-3xl">
                 {{ $t("brand.name") }}
               </h1>
-              <div class="text-secondary text-sm md:text-lg">{{ $t("brand.tagline") }}</div>
+              <div class="text-sm text-secondary md:text-lg">{{ $t("brand.tagline") }}</div>
             </div>
           </div>
           <nav class="hidden md:block">
             <ul class="flex items-center space-x-6">
-              <li>
-                <NuxtLink to="/" class="font-medium transition hover:text-secondary">
-                  {{ $t("header.home") }}
+              <li v-for="link in links" :key="link.name">
+                <NuxtLink :to="link.path" class="font-medium transition hover:text-secondary">
+                  {{ $t(link.name) }}
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/menu" class="font-medium transition hover:text-secondary">
-                  {{ $t("header.menu") }}
-                </NuxtLink>
-              </li>
-              <li>
-                <NuxtLink to="/contact" class="font-medium transition hover:text-secondary">
-                  {{ $t("header.contact") }}
-                </NuxtLink>
-              </li>
-              <li>
-                <div class="relative ml-4">
+                <div class="relative mr-4">
                   <select
                     :value="locale"
                     class="cursor-pointer appearance-none rounded-md bg-white px-3 py-1 pr-8 text-primary shadow-sm"
@@ -82,11 +89,11 @@
             </ul>
           </nav>
           <!-- Mobile menu button -->
-          <button class="relative z-30 text-primary md:hidden" @click="toggleMobileMenu">
+          <button class="relative z-40 text-primary md:hidden" @click="toggleMobileMenu">
             <svg
               v-if="!isMobileMenuOpen"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-8 w-8"
+              class="mr-1 h-8 w-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -122,27 +129,13 @@
     >
       <div class="flex-grow px-4 pt-20">
         <ul class="space-y-4">
-          <li>
-            <NuxtLink to="/" class="block py-2 font-medium transition hover:text-secondary" @click="toggleMobileMenu">
-              {{ $t("header.home") }}
-            </NuxtLink>
-          </li>
-          <li>
+          <li v-for="link in links" :key="link.name">
             <NuxtLink
-              to="/menu"
+              :to="link.path"
               class="block py-2 font-medium transition hover:text-secondary"
               @click="toggleMobileMenu"
             >
-              {{ $t("header.menu") }}
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink
-              to="/contact"
-              class="block py-2 font-medium transition hover:text-secondary"
-              @click="toggleMobileMenu"
-            >
-              {{ $t("header.contact") }}
+              {{ $t(link.name) }}
             </NuxtLink>
           </li>
         </ul>

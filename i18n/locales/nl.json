@@ -6,8 +6,8 @@
   "header": {
     "home": "Home",
     "menu": "Menu",
-    "about": "Over Ons",
-    "contact": "Contact"
+    "contact": "Contact",
+    "order": "Bestel"
   },
   "home": {
     "pageTitle": "Welkom bij Samui's Kitchen",

@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
-    "@nuxtjs/leaflet"
+    "@nuxtjs/leaflet",
+    "@pinia/nuxt"
   ],
   i18n: {
     defaultLocale: "nl",

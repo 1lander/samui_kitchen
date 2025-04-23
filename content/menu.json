@@ -104,15 +104,18 @@
       "items": [
         {
           "name": "menu.dishes.chaThai",
-          "price": 4.0
+          "price": 4.0,
+          "forbidSpecialRequests": true
         },
         {
           "name": "menu.dishes.pinkMilk",
-          "price": 4.0
+          "price": 4.0,
+          "forbidSpecialRequests": true
         },
         {
           "name": "menu.dishes.coconut",
-          "price": 4.0
+          "price": 4.0,
+          "forbidSpecialRequests": true
         }
       ]
     },
@@ -121,7 +124,8 @@
       "items": [
         {
           "name": "menu.dishes.rice",
-          "price": 4.0
+          "price": 4.0,
+          "forbidSpecialRequests": true
         }
       ]
     },
@@ -130,7 +134,8 @@
       "items": [
         {
           "name": "menu.dishes.mangoStickyRice",
-          "price": 12.0
+          "price": 12.0,
+          "forbidSpecialRequests": true
         }
       ]
     }

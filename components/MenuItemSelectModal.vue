@@ -57,7 +57,7 @@
         </div>
       </div>
 
-      <div class="mb-6">
+      <div class="mb-6" v-if="!item.forbidSpecialRequests">
         <label for="notes" class="mb-2 block font-medium">{{ t("order.specialRequests") }}</label>
         <textarea
           id="notes"
@@ -76,7 +76,7 @@
           {{ t("common.cancel") }}
         </button>
         <button @click="addToOrder" class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white">
-          {{ t("order.addToOrder") }} - € {{ item.price.toFixed(2) }}
+          {{ t("order.addToOrder") }}
         </button>
       </div>
     </div>

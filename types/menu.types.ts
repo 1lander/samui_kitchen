@@ -9,6 +9,7 @@ export interface MenuItem {
   dishChoices?: DishChoice[];
   image?: string;
   isPopular?: boolean;
+  forbidSpecialRequests?: boolean;
 }
 
 export interface MenuCategory {

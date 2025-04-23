@@ -11,7 +11,15 @@
     description: t("contact.pageSubtitle")
   });
 
-  const formData = ref({
+  interface FormData {
+    [key: string]: string;
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+  }
+
+  const formData = ref<FormData>({
     name: "",
     email: "",
     subject: "General Inquiry",
@@ -41,7 +49,7 @@
 
       isSubmitted.value = true;
     } catch (error) {
-      errorMessage.value = error.message;
+      errorMessage.value = error instanceof Error ? error.message : "An error occurred";
     } finally {
       isSubmitting.value = false;
     }
@@ -175,42 +183,16 @@
           </div>
 
           <form v-if="!isSubmitted" class="space-y-6" @submit.prevent="submitForm">
-            <div v-for="field in contact.formFields" :key="field.name" class="space-y-1">
-              <label :for="field.name" class="block text-sm font-medium text-gray-700">
-                {{ t(field.label) }} {{ field.required ? "*" : "" }}
-              </label>
-
-              <input
-                v-if="['text', 'email', 'tel'].includes(field.type)"
-                :id="field.name"
-                v-model="formData[field.name]"
-                :type="field.type"
-                :required="field.required"
-                class="block w-full rounded-md border-gray-300 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
-              />
-
-              <!-- Select input -->
-              <select
-                v-else-if="field.type === 'select'"
-                :id="field.name"
-                v-model="formData[field.name]"
-                :required="field.required"
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
-              >
-                <option v-for="option in field.options" :key="option" :value="option">
-                  {{ t(option) }}
-                </option>
-              </select>
-
-              <textarea
-                v-else-if="field.type === 'textarea'"
-                :id="field.name"
-                v-model="formData[field.name]"
-                :required="field.required"
-                rows="5"
-                class="block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"
-              ></textarea>
-            </div>
+            <FormInput
+              v-for="field in contact.formFields"
+              :key="field.name"
+              :id="field.name"
+              :type="field.type"
+              :label="t(field.label)"
+              :required="field.required"
+              v-model="formData[field.name]"
+              :options="field.options"
+            />
 
             <div>
               <button

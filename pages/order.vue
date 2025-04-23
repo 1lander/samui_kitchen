@@ -1,11 +1,68 @@
 <script setup lang="ts">
-import type { OrderContent } from '~/types';
+import type { OrderContent, MenuContent, MenuItem } from '~/types';
 import { useOrderStore } from '~/stores/order'
 import { storeToRefs } from 'pinia'
+import MenuItemComponent from '~/components/MenuItem.vue'
+import MenuItemSelectModal from '~/components/MenuItemSelectModal.vue'
 
 const { t } = useI18n();
-const { data } = await useAsyncData(() => queryContent<OrderContent>("/order").findOne());
-const order = computed(() => data.value);
+const { data: orderData } = await useAsyncData(() => queryContent<OrderContent>("/order").findOne());
+const { data: menuData } = await useAsyncData(() => queryContent<MenuContent>("/menu").findOne());
+const order = computed(() => orderData.value);
+const menu = computed(() => menuData.value);
+
+// Menu item selection state
+const selectedCategory = ref<string | null>(null)
+const isLoading = ref(false)
+const error = ref<string | null>(null)
+const selectedItem = ref<MenuItem | null>(null)
+
+// Computed
+const categories = computed(() => menu.value?.categories || [])
+
+const allItems = computed(() => {
+  if (!menu.value) return []
+  
+  return menu.value.categories.flatMap(category => 
+    category.items.map(item => ({
+      ...item,
+      category: category.name
+    }))
+  )
+})
+
+// Set the first category as selected by default when menu loads
+watchEffect(() => {
+  if (menu.value?.categories && menu.value.categories.length > 0 && !selectedCategory.value) {
+    selectedCategory.value = menu.value.categories[0].name
+  }
+})
+
+function setSelectedCategory(categoryName: string) {
+  selectedCategory.value = categoryName
+}
+
+function handleItemClick(item: MenuItem) {
+  selectedItem.value = item
+}
+
+function handleCloseModal() {
+  selectedItem.value = null
+}
+
+function handleAddItem({ name, price, dishChoice, notes }: { 
+  name: string; 
+  price: number; 
+  dishChoice?: string; 
+  notes?: string 
+}) {
+  orderStore.addItem(
+    { name, price },
+    dishChoice,
+    notes
+  )
+  selectedItem.value = null
+}
 
 const orderStore = useOrderStore()
 const { items, subtotal, total, totalItems } = storeToRefs(orderStore)
@@ -30,7 +87,52 @@ useSeoMeta({
         <!-- Menu Items Column -->
         <div class="lg:col-span-2">
           <h2 class="text-2xl font-bold mb-6">{{ t('order.selectItems') }}</h2>
-          <MenuItemSelection />
+          
+          <!-- Category selection -->
+          <div v-if="!isLoading && categories.length > 0" class="mb-6">
+            <div class="flex overflow-x-auto gap-2 pb-2">
+              <button
+                v-for="category in categories"
+                :key="category.name"
+                @click="setSelectedCategory(category.name)"
+                class="px-4 py-2 whitespace-nowrap rounded-full transition-colors"
+                :class="[
+                  selectedCategory === category.name 
+                    ? 'bg-primary text-white' 
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                ]"
+              >
+                {{ t(category.name) }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Loading state -->
+          <div v-if="isLoading" class="py-12 text-center">
+            <p class="text-lg text-gray-600">{{ t('menu.loading') }}</p>
+          </div>
+
+          <!-- Item selection -->
+          <div v-else-if="allItems.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <MenuItemComponent
+              v-for="item in allItems.filter(i => i.category === selectedCategory)"
+              :key="item.name"
+              :item="item"
+              @click="handleItemClick"
+            />
+          </div>
+
+          <!-- No items message -->
+          <div v-else class="py-12 text-center">
+            <p class="text-lg text-gray-600">{{ t('menu.noItems') }}</p>
+          </div>
+
+          <!-- Item customization modal -->
+          <MenuItemSelectModal
+            :item="selectedItem"
+            @close="handleCloseModal"
+            @add-item="handleAddItem"
+          />
         </div>
 
         <!-- Order Summary Column -->

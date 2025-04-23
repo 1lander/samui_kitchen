@@ -66,40 +66,7 @@
         </h2>
 
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <div
-            v-for="(item, itemIndex) in category.items"
-            :key="itemIndex"
-            class="border border-gray-200 p-4 transition-shadow hover:shadow-md md:rounded-lg"
-          >
-            <div class="flex items-start justify-between">
-              <h3 class="text-xl font-semibold">
-                {{ t(item.name) }}
-                <span v-if="item.dishChoices && item.dishChoices.length > 0" class="mt-1 block text-sm text-gray-600">
-                  {{ t("menu.dishChoices.choice") }}:
-                  <span v-for="(choice, choiceIndex) in item.dishChoices" :key="choiceIndex" class="mr-1">
-                    {{ t(`menu.dishChoices.${choice}`) }}
-                    <template v-if="choiceIndex < item.dishChoices.length - 1">/</template>
-                  </span>
-                </span>
-              </h3>
-              <div class="text-right">
-                <span class="text-lg font-medium text-secondary">€ {{ item.price.toFixed(2) }}</span>
-              </div>
-            </div>
-            <p v-if="item.description" class="mt-1 text-secondary">
-              {{ t(item.description) }}
-            </p>
-            
-            <!-- Add to order button -->
-            <div class="mt-3 flex justify-end">
-              <button
-                @click="selectItem(item)"
-                class="rounded-md bg-primary px-4 py-2 text-white hover:bg-primary-dark transition-colors"
-              >
-                {{ t('order.addToOrder') }}
-              </button>
-            </div>
-          </div>
+          <MenuItem v-for="(item, itemIndex) in category.items" :key="itemIndex" :item="item" @click="selectItem(item)" />
         </div>
       </div>
     </div>
@@ -114,10 +81,9 @@
   <!-- Item customization modal -->
   <div v-if="selectedItem" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
     <div class="bg-white rounded-lg p-6 max-w-md w-full">
-      <h3 class="text-xl font-bold mb-4">{{ t(selectedItem.name) }}</h3>
+      <h3 class="text-xl font-bold mb-2">{{ t(selectedItem.name) }}</h3>
       
       <div v-if="selectedItem.dishChoices && selectedItem.dishChoices.length > 0" class="mb-4">
-        <p class="font-medium mb-2">{{ t('menu.dishChoices.choice') }}:</p>
         <div class="flex flex-wrap gap-2">
           <button
             v-for="choice in selectedItem.dishChoices"

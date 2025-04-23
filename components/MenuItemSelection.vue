@@ -140,7 +140,6 @@ const { t } = useI18n()
           {{ t(item.description) }}
         </p>
         <div v-if="item.dishChoices && item.dishChoices.length > 0" class="mt-2 text-sm">
-          <span class="text-gray-600">{{ t('menu.dishChoices.choice') }}:</span>
           <span v-for="choice in item.dishChoices" :key="choice" class="ml-1">
             {{ t(`menu.dishChoices.${choice}`) }}
             <template v-if="choice !== item.dishChoices[item.dishChoices.length - 1]">/</template>

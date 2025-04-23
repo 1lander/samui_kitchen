@@ -62,7 +62,6 @@
         </div>
       </div>
     </div>
+    <MenuItemSelectModal :item="selectedItem" @close="selectedItem = null" @add-item="handleAddItem" />
   </div>
-
-  <MenuItemSelectModal :item="selectedItem" @close="selectedItem = null" @add-item="handleAddItem" />
 </template>

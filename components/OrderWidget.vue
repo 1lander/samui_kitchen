@@ -16,8 +16,8 @@
 <template>
   <div class="fixed bottom-4 right-4 z-40">
     <button
-      @click="toggleVisibility"
       class="hover:bg-primary-dark flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2 text-white shadow-md transition-colors"
+      @click="toggleVisibility"
     >
       <span class="font-bold">{{ totalItems }}</span>
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

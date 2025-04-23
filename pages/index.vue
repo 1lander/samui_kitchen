@@ -27,7 +27,7 @@
       </NuxtLink>
     </PageHeader>
 
-    <div class="flex flex-col gap-20 mx-auto max-w-5xl">
+    <div class="mx-auto flex max-w-5xl flex-col gap-20">
       <section>
         <div class="grid items-center gap-12 md:grid-cols-2">
           <div class="px-3 text-lg text-gray-700 md:px-0">
@@ -83,18 +83,18 @@
       </section>
 
       <section>
-          <h2 class="mb-8 text-center text-3xl font-bold">
-            {{ t("home.testimonials.title") }}
-          </h2>
-          <div class="grid gap-8 md:grid-cols-3">
-            <div
-              v-for="(quote, index) in home.testimonials.quotes"
-              :key="index"
-              class="rounded-lg bg-white p-8 shadow-md"
-            >
-              <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
-              <p class="font-medium">— {{ quote.author }}</p>
-            </div>
+        <h2 class="mb-8 text-center text-3xl font-bold">
+          {{ t("home.testimonials.title") }}
+        </h2>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            v-for="(quote, index) in home.testimonials.quotes"
+            :key="index"
+            class="rounded-lg bg-white p-8 shadow-md"
+          >
+            <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
+            <p class="font-medium">— {{ quote.author }}</p>
+          </div>
         </div>
       </section>
 

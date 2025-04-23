@@ -1,25 +1,23 @@
 <script setup lang="ts">
-const { t } = useI18n();
+  const { t } = useI18n();
 
-defineProps<{
-  id: string;
-  type: "text" | "email" | "tel" | "select" | "textarea";
-  label: string;
-  required?: boolean;
-  options?: string[];
-  modelValue: string;
-}>();
+  defineProps<{
+    id: string;
+    type: "text" | "email" | "tel" | "select" | "textarea";
+    label: string;
+    required?: boolean;
+    options?: string[];
+    modelValue: string;
+  }>();
 
-defineEmits<{
-  "update:modelValue": [value: string];
-}>();
+  defineEmits<{
+    "update:modelValue": [value: string];
+  }>();
 </script>
 
 <template>
   <div class="space-y-1">
-    <label :for="id" class="block text-sm font-medium text-gray-700">
-      {{ label }} {{ required ? "*" : "" }}
-    </label>
+    <label :for="id" class="block text-sm font-medium text-gray-700">{{ label }} {{ required ? "*" : "" }}</label>
 
     <input
       v-if="['text', 'email', 'tel'].includes(type)"
@@ -54,4 +52,4 @@ defineEmits<{
       @input="$emit('update:modelValue', ($event.target as HTMLTextAreaElement).value)"
     ></textarea>
   </div>
-</template> 
+</template>

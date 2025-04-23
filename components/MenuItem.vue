@@ -17,19 +17,19 @@
 
 <template>
   <div
-    @click="handleClick"
     class="cursor-pointer border border-gray-200 p-4 transition-shadow hover:shadow-md md:rounded-lg"
+    @click="handleClick"
   >
     <div class="flex items-start justify-between">
       <div>
         <div class="flex flex-wrap items-center">
-          <div class="text-xl font-semibold mr-2">{{ t(item.name) }}</div>
-          <div class="text-l font-semibold text-gray-500" v-if="item.dishChoices && item.dishChoices.length > 0">
+          <div class="mr-2 text-xl font-semibold">{{ t(item.name) }}</div>
+          <div v-if="item.dishChoices && item.dishChoices.length > 0" class="text-l font-semibold text-gray-500">
             (<span v-for="(choice, choiceIndex) in item.dishChoices" :key="choiceIndex">{{ t(`menu.dishChoices.${choice}`) }}<template v-if="choiceIndex < item.dishChoices.length - 1">, </template></span>)
           </div>
         </div>
       </div>
-      <div class="text-right whitespace-nowrap">
+      <div class="whitespace-nowrap text-right">
         <span class="text-lg font-medium text-secondary">€ {{ item.price.toFixed(2) }}</span>
       </div>
     </div>

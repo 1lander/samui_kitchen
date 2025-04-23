@@ -14,9 +14,13 @@
   const selectedDishChoice = ref<string | null>(null);
   const itemNotes = ref("");
 
-  watch(() => props.item, (newItem) => {
+  watch(
+    () => props.item,
+    (newItem) => {
       selectedDishChoice.value = newItem?.dishChoices?.[0] || null;
-  }, { immediate: true });
+    },
+    { immediate: true }
+  );
 
   function resetForm() {
     selectedDishChoice.value = props.item?.dishChoices?.[0] || null;
@@ -51,20 +55,20 @@
           <button
             v-for="choice in item.dishChoices"
             :key="choice"
-            @click="selectedDishChoice = choice"
             class="rounded-full border px-3 py-1"
             :class="[
               selectedDishChoice === choice
                 ? 'border-primary bg-primary text-white'
                 : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-100'
             ]"
+            @click="selectedDishChoice = choice"
           >
             {{ t(`menu.dishChoices.${choice}`) }}
           </button>
         </div>
       </div>
 
-      <div class="mb-6" v-if="!item.forbidSpecialRequests">
+      <div v-if="!item.forbidSpecialRequests" class="mb-6">
         <label for="notes" class="mb-2 block font-medium">{{ t("order.specialRequests") }}</label>
         <textarea
           id="notes"
@@ -77,12 +81,12 @@
 
       <div class="flex gap-3">
         <button
-          @click="closeModal"
           class="flex-1 rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
+          @click="closeModal"
         >
           {{ t("common.cancel") }}
         </button>
-        <button @click="addToOrder" class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white">
+        <button class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white" @click="addToOrder">
           {{ t("order.addToOrder") }}
         </button>
       </div>

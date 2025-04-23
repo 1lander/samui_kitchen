@@ -89,13 +89,13 @@
             <button
               v-for="category in categories"
               :key="category.name"
-              @click="setSelectedCategory(category.name)"
               class="whitespace-nowrap rounded-full px-4 py-2 transition-colors"
               :class="[
                 selectedCategory === category.name
                   ? 'bg-primary text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               ]"
+              @click="setSelectedCategory(category.name)"
             >
               {{ t(category.name) }}
             </button>
@@ -155,8 +155,8 @@
                   <div class="flex items-center">
                     <div class="mr-4 flex items-center">
                       <button
-                        @click="updateItemQuantity(item.id, item.quantity - 1)"
                         class="flex h-8 w-8 items-center justify-center rounded-l border border-gray-300 text-gray-600 hover:bg-gray-100"
+                        @click="updateItemQuantity(item.id, item.quantity - 1)"
                       >
                         -
                       </button>
@@ -164,8 +164,8 @@
                         {{ item.quantity }}
                       </span>
                       <button
-                        @click="updateItemQuantity(item.id, item.quantity + 1)"
                         class="flex h-8 w-8 items-center justify-center rounded-r border border-gray-300 text-gray-600 hover:bg-gray-100"
+                        @click="updateItemQuantity(item.id, item.quantity + 1)"
                       >
                         +
                       </button>
@@ -174,9 +174,9 @@
                     <div class="min-w-[60px] text-right">€ {{ (item.price * item.quantity).toFixed(2) }}</div>
 
                     <button
-                      @click="removeItem(item.id)"
                       class="ml-2 text-red-500 hover:text-red-700"
                       title="Remove item"
+                      @click="removeItem(item.id)"
                     >
                       <span class="sr-only">Remove</span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -205,8 +205,8 @@
 
             <div class="mt-6 flex gap-4">
               <button
-                @click="clearOrder"
                 class="flex-1 rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
+                @click="clearOrder"
               >
                 {{ t("order.clearOrder") }}
               </button>

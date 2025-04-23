@@ -185,12 +185,12 @@
           <form v-if="!isSubmitted" class="space-y-6" @submit.prevent="submitForm">
             <FormInput
               v-for="field in contact.formFields"
-              :key="field.name"
               :id="field.name"
+              :key="field.name"
+              v-model="formData[field.name]"
               :type="field.type"
               :label="t(field.label)"
               :required="field.required"
-              v-model="formData[field.name]"
               :options="field.options"
             />
 

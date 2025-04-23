@@ -69,20 +69,13 @@
                 <div class="relative mr-4">
                   <select
                     :value="locale"
-                    class="cursor-pointer appearance-none rounded-md bg-white px-3 py-1 pr-8 text-primary shadow-sm"
+                    class="cursor-pointer appearance-none rounded-md border-primary bg-white px-3 py-1 pr-8 text-primary shadow-sm"
                     @change="handleLocaleChange"
                   >
                     <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="flex items-center">
                       {{ flagEmoji[loc.code] }} {{ loc.name }}
                     </option>
                   </select>
-                  <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-primary">
-                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                      <path
-                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                      />
-                    </svg>
-                  </div>
                 </div>
               </li>
             </ul>
@@ -126,8 +119,17 @@
       class="fixed right-0 top-0 z-30 flex h-full w-64 transform flex-col bg-background shadow-xl transition-transform duration-300 ease-in-out md:hidden"
       :class="isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'"
     >
-      <div class="flex-grow px-4 pt-20">
-        <ul class="space-y-4">
+      <div class="flex-grow px-4 pt-8">
+        <select
+          :value="locale"
+          class="w-full cursor-pointer appearance-none rounded-md border-primary bg-white px-3 py-1 pr-8 text-primary shadow-sm"
+          @change="handleLocaleChange"
+        >
+          <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="flex items-center">
+            {{ flagEmoji[loc.code] }} {{ loc.name }}
+          </option>
+        </select>
+        <ul class="space-y-4 pt-10 text-primary">
           <li v-for="link in links" :key="link.name">
             <NuxtLink
               :to="link.path"
@@ -138,28 +140,6 @@
             </NuxtLink>
           </li>
         </ul>
-      </div>
-
-      <!-- Language picker at bottom -->
-      <div class="border-t border-gray-200 px-4 py-4">
-        <div class="relative">
-          <select
-            :value="locale"
-            class="w-full cursor-pointer appearance-none rounded-md bg-white px-3 py-1 pr-8 text-primary shadow-sm"
-            @change="handleLocaleChange"
-          >
-            <option v-for="loc in locales" :key="loc.code" :value="loc.code" class="flex items-center">
-              {{ flagEmoji[loc.code] }} {{ loc.name }}
-            </option>
-          </select>
-          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-primary">
-            <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-              <path
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              />
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
 

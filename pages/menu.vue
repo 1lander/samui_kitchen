@@ -19,12 +19,7 @@
     };
   }
 
-  function handleAddItem(itemData: { 
-    name: string; 
-    price: number; 
-    dishChoice?: string; 
-    notes?: string;
-  }) {
+  function handleAddItem(itemData: { name: string; price: number; dishChoice?: string; notes?: string }) {
     orderStore.addItem(
       {
         name: itemData.name,
@@ -47,11 +42,11 @@
   <div v-if="menu">
     <PageHeader :image="menu.pageHeader.image" :title="t('menu.pageTitle')" :subtitle="t('menu.pageSubtitle')" />
 
-    <div class="mx-auto mb-12 max-w-3xl text-center">
-      <p class="text-lg text-gray-700">{{ t("menu.description") }}</p>
-    </div>
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="mx-auto mb-12 max-w-3xl text-center">
+        <p class="text-lg text-gray-700">{{ t("menu.description") }}</p>
+      </div>
 
-    <div class="mx-auto max-w-5xl">
       <div v-for="(category, index) in menu.categories" :key="index" class="mb-12">
         <h2 class="mb-6 border-b-2 border-secondary pb-2 text-center text-3xl font-bold">
           {{ t(category.name) }}
@@ -69,13 +64,5 @@
     </div>
   </div>
 
-  <div v-else class="py-12 text-center">
-    <p class="text-lg text-gray-600">{{ t("menu.loading") }}</p>
-  </div>
-
-  <MenuItemSelectModal 
-    :item="selectedItem"
-    @close="selectedItem = null"
-    @add-item="handleAddItem"
-  />
+  <MenuItemSelectModal :item="selectedItem" @close="selectedItem = null" @add-item="handleAddItem" />
 </template>

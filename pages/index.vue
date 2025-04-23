@@ -27,8 +27,8 @@
       </NuxtLink>
     </PageHeader>
 
-    <div class="flex flex-col gap-20">
-      <section class="mx-auto max-w-7xl">
+    <div class="flex flex-col gap-20 mx-auto max-w-5xl">
+      <section>
         <div class="grid items-center gap-12 md:grid-cols-2">
           <div class="px-3 text-lg text-gray-700 md:px-0">
             {{ t("home.introduction.content") }}
@@ -41,27 +41,23 @@
         </div>
       </section>
 
-      <!-- Features Section -->
       <section>
-        <div class="mx-auto max-w-7xl px-4">
-          <div class="grid gap-8 md:grid-cols-3">
-            <div
-              v-for="(feature, index) in home.features"
-              :key="index"
-              class="rounded-lg bg-white p-8 text-center shadow-md"
-            >
-              <div class="mb-4 text-primary">
-                <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
-              </div>
-              <h3 class="mb-3 text-xl font-bold">{{ feature.title }}</h3>
-              <p class="text-gray-600">{{ feature.description }}</p>
+        <div class="grid gap-8 md:grid-cols-3">
+          <div
+            v-for="(feature, index) in home.features"
+            :key="index"
+            class="rounded-lg bg-white p-8 text-center shadow-md"
+          >
+            <div class="mb-4 text-primary">
+              <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
             </div>
+            <h3 class="mb-3 text-xl font-bold">{{ feature.title }}</h3>
+            <p class="text-gray-600">{{ feature.description }}</p>
           </div>
         </div>
       </section>
 
-      <!-- Popular Dishes Section -->
-      <section class="max-w-7xl md:mx-auto">
+      <section>
         <div class="mb-8 text-center">
           <h2 class="mb-2 text-3xl font-bold">{{ t("home.menu.title") }}</h2>
           <p class="text-lg text-gray-600">{{ t("home.menu.subtitle") }}</p>
@@ -86,9 +82,7 @@
         </div>
       </section>
 
-      <!-- Testimonials Section -->
       <section>
-        <div class="mx-auto max-w-7xl px-4">
           <h2 class="mb-8 text-center text-3xl font-bold">
             {{ t("home.testimonials.title") }}
           </h2>
@@ -108,7 +102,6 @@
               <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
               <p class="font-medium">— {{ quote.author }}</p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -134,13 +127,4 @@
     </section> -->
     </div>
   </div>
-  <div v-else class="py-12 text-center">
-    <p class="text-lg text-gray-600">Loading content...</p>
-  </div>
 </template>
-
-<style scoped>
-  .Icon {
-    display: inline-block;
-  }
-</style>

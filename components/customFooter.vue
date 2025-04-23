@@ -1,9 +1,7 @@
 <script setup>
-const { data: contactContent } = await useAsyncData('contact', () =>
-  queryCollection("content").path("/contact").first()
-);
+const { data } = await useAsyncData('contact', () => queryContent('/contact').findOne())
 
-const contactData = computed(() => contactContent.value?.body);
+const contactData = computed(() => data.value);
 </script>
 
 <template>

@@ -23,12 +23,15 @@ defineProps({
       class="w-full h-full object-cover"
     />
     <div
-      class="absolute inset-0 flex flex-col justify-center items-center text-white"
+      class="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-center text-white"
     >
       <h1 class="text-4xl md:text-5xl font-bold mb-2">
         {{ title }}
       </h1>
       <p v-if="subtitle" class="text-xl md:text-2xl">{{ subtitle }}</p>
+      <div class="mt-6">
+        <slot />
+      </div>
     </div>
   </div>
 </template> 

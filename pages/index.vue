@@ -1,45 +1,58 @@
-<script setup>
+<script setup lang="ts">
+import type { HomeContent, MenuContent } from "~/types";
+const { t } = useI18n();
+
 const { data: homeData } = await useAsyncData(() =>
-  queryCollection("content").path("/home").first()
+  queryContent<HomeContent>("/home").findOne()
 );
 const { data: menuData } = await useAsyncData(() =>
-  queryCollection("content").path("/menu").first()
+  queryContent<MenuContent>("menu").findOne()
 );
-const home = computed(() => homeData.value?.body);
-const popularDishes = computed(() => menuData.value?.body.categories[0].items.filter(dish => dish.isPopular));
+
+const home = computed(() => homeData.value);
+const popularDishes = computed(() =>
+  menuData.value?.categories.flatMap((category) =>
+    category.items.filter((item) => item.isPopular)
+  )
+);
 
 useSeoMeta({
-  title: "Samui Kitchen - Authentic Thai Cuisine",
-  description:
-    "Experience the authentic flavors of Thailand at Samui Kitchen. Fresh ingredients, traditional recipes, and fast delivery.",
+  title: t("home.pageTitle") + " - Samui Kitchen",
+  description: t("home.pageSubtitle"),
 });
 </script>
 
 <template>
   <div v-if="home">
-    <section class="relative">
-      <div class="h-[600px] w-full">
-        <NuxtImg :src="home.hero.image" alt="Thai cuisine" class="w-full h-full object-cover" />
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div class="text-center text-white px-4 max-w-4xl">
-            <h1 class="text-5xl font-bold mb-4">{{ $t('home.pageTitle') }}</h1>
-            <p class="text-xl mb-8">{{ $t('home.pageSubtitle') }}</p>
-            <NuxtLink :to="home.hero.cta" class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-full text-lg font-medium transition">
-              {{ $t('home.menuButton') }}
-            </NuxtLink>
-          </div>
-        </div>
-      </div>
-    </section>
+    <PageHeader
+      :image="home.hero.image"
+      :title="t('home.pageTitle')"
+      :subtitle="t('home.pageSubtitle')"
+    >
+      <NuxtLink
+        :to="home.hero.cta"
+        class="bg-primary hover:bg-primary/80 text-white px-8 py-3 rounded-full text-lg font-medium transition"
+      >
+        {{ t("home.menuButton") }}
+      </NuxtLink>
+    </PageHeader>
 
     <section class="py-16 px-4 max-w-7xl mx-auto">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl font-bold mb-6">{{ $t('home.introduction.title') }}</h2>
-          <p class="text-lg text-gray-700">{{ $t('home.introduction.content') }}</p>
+          <h2 class="text-3xl font-bold mb-6">
+            {{ t("home.introduction.title") }}
+          </h2>
+          <p class="text-lg text-gray-700">
+            {{ t("home.introduction.content") }}
+          </p>
         </div>
         <div>
-          <NuxtImg :src="home.introduction.image" alt="Samui Kitchen restaurant" class="rounded-lg shadow-xl w-full h-auto" />
+          <NuxtImg
+            :src="home.introduction.image"
+            alt="Samui Kitchen restaurant"
+            class="rounded-lg shadow-xl w-full h-auto"
+          />
         </div>
       </div>
     </section>
@@ -48,7 +61,11 @@ useSeoMeta({
     <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4">
         <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="(feature, index) in home.features" :key="index" class="bg-white p-8 rounded-lg shadow-md text-center">
+          <div
+            v-for="(feature, index) in home.features"
+            :key="index"
+            class="bg-white p-8 rounded-lg shadow-md text-center"
+          >
             <div class="text-red-600 mb-4">
               <Icon :name="feature.icon" class="text-4xl" />
             </div>
@@ -62,18 +79,30 @@ useSeoMeta({
     <!-- Popular Dishes Section -->
     <section class="py-16 px-4 max-w-7xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold mb-2">{{ $t('home.menu.title') }}</h2>
-        <p class="text-lg text-gray-600">{{ $t('home.menu.subtitle') }}</p>
+        <h2 class="text-3xl font-bold mb-2">{{ t("home.menu.title") }}</h2>
+        <p class="text-lg text-gray-600">{{ t("home.menu.subtitle") }}</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div v-for="(dish, index) in popularDishes" :key="index" class="bg-white rounded-lg overflow-hidden shadow-lg">
-          <NuxtImg :src="dish.image" :alt="dish.name" class="w-full h-64 object-cover" />
+        <div
+          v-for="(dish, index) in popularDishes"
+          :key="index"
+          class="bg-white rounded-lg overflow-hidden shadow-lg"
+        >
+          <NuxtImg
+            :src="dish.image"
+            :alt="dish.name"
+            class="w-full h-64 object-cover"
+          />
           <div class="p-6">
             <div class="flex justify-between items-center mb-2">
-              <h3 class="text-xl font-bold">{{ $t(dish.name) }}</h3>
-              <span class="text-red-600 font-semibold">{{ dish.price.toFixed(2) }} €</span>
+              <h3 class="text-xl font-bold">{{ t(dish.name) }}</h3>
+              <span class="text-red-600 font-semibold"
+                >{{ dish.price.toFixed(2) }} €</span
+              >
             </div>
-            <p class="text-gray-600">{{ $t(dish.description) }}</p>
+            <p v-if="dish.description" class="text-gray-600">
+              {{ t(dish.description) }}
+            </p>
           </div>
         </div>
       </div>
@@ -82,9 +111,15 @@ useSeoMeta({
     <!-- Testimonials Section -->
     <section class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">{{ $t('home.testimonials.title') }}</h2>
+        <h2 class="text-3xl font-bold text-center mb-12">
+          {{ t("home.testimonials.title") }}
+        </h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <div v-for="(quote, index) in home.testimonials.quotes" :key="index" class="bg-white p-8 rounded-lg shadow-md">
+          <div
+            v-for="(quote, index) in home.testimonials.quotes"
+            :key="index"
+            class="bg-white p-8 rounded-lg shadow-md"
+          >
             <div class="text-yellow-500 mb-4">
               <Icon name="mdi:star" class="text-xl" />
               <Icon name="mdi:star" class="text-xl" />

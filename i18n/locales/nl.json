@@ -63,8 +63,8 @@
         "description": "Ontdek ons uitgebreide menu van authentieke Thaise gerechten, bereid met traditionele recepten en de meest verse ingrediënten. Alle gerechten kunnen worden aangepast aan uw gewenste pittigheid.",
         "loading": "Inhoud laden...",
         "categories": {
-            "mainDishes": "Hoofdgerechten",
-            "friedFood": "Gefrituurde Gerechten",
+            "main": "Hoofdgerechten",
+            "fried": "Gefrituurde Gerechten",
             "drinks": "Dranken",
             "extras": "Extra's",
             "dessert": "Dessert"

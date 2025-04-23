@@ -63,8 +63,8 @@
         "description": "Explore our extensive menu of authentic Thai dishes, prepared with traditional recipes and the freshest ingredients. All dishes can be customized to your preferred spice level.",
         "loading": "Loading content...",
         "categories": {
-            "mainDishes": "Main Dishes",
-            "friedFood": "Fried Food",
+            "main": "Main Dishes",
+            "fried": "Fried Food",
             "drinks": "Drinks",
             "extras": "Extras",
             "dessert": "Dessert"

@@ -4,7 +4,7 @@
   },
   "categories": [
     {
-      "name": "menu.categories.mainDishes",
+      "name": "menu.categories.main",
       "items": [
         { 
           "name": "menu.dishes.padThai", 
@@ -68,7 +68,7 @@
       ]
     },
     {
-      "name": "menu.categories.friedFood",
+      "name": "menu.categories.fried",
       "items": [
         { 
           "name": "menu.dishes.springRolls", 

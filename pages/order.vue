@@ -14,7 +14,6 @@
   // Menu item selection state
   const selectedCategory = ref<string | null>(null);
   const isLoading = ref(false);
-  const error = ref<string | null>(null);
   const selectedItem = ref<MenuItem | null>(null);
 
   // Computed
@@ -129,7 +128,7 @@
 
       <!-- Order Summary Column -->
       <div class="lg:col-span-1">
-        <div class="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
+        <div class="border border-gray-200 bg-white p-4 shadow-sm md:rounded-lg">
           <h2 class="mb-4 border-b border-gray-200 pb-2 text-xl font-bold">
             {{ t("order.yourOrder") }}
             <span v-if="totalItems" class="ml-2 text-secondary">({{ totalItems }})</span>

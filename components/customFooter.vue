@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <footer class="text-text bg-background shadow-lg">
+  <footer class="text-text bg-background shadow-lg mt-20">
     <div class="container mx-auto px-4 py-8">
       <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
         <div>

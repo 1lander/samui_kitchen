@@ -92,13 +92,6 @@
               :key="index"
               class="rounded-lg bg-white p-8 shadow-md"
             >
-              <div class="mb-4 text-yellow-500">
-                <Icon name="mdi:star" class="text-xl" />
-                <Icon name="mdi:star" class="text-xl" />
-                <Icon name="mdi:star" class="text-xl" />
-                <Icon name="mdi:star" class="text-xl" />
-                <Icon name="mdi:star" class="text-xl" />
-              </div>
               <p class="mb-4 italic text-gray-700">"{{ quote.text }}"</p>
               <p class="font-medium">— {{ quote.author }}</p>
             </div>

@@ -18,9 +18,9 @@
 
 <template>
   <div v-if="home">
-    <PageHeader :image="home.hero.image" :title="t('home.pageTitle')" :subtitle="t('home.pageSubtitle')">
+    <PageHeader :image="home.pageHeader.image" :title="t('home.pageTitle')" :subtitle="t('home.pageSubtitle')">
       <NuxtLink
-        :to="home.hero.cta"
+        :to="home.pageHeader.cta"
         class="rounded-full bg-primary px-8 py-3 text-lg font-medium text-white transition hover:bg-primary/80"
       >
         {{ t("home.menuButton") }}

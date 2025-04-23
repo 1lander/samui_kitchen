@@ -1,7 +1,4 @@
-export interface Hero {
-  image: string;
-  cta: string;
-}
+import type { PageHeader } from "./common.types";
 
 export interface Introduction {
   image: string;
@@ -23,7 +20,7 @@ export interface TestimonialSection {
 }
 
 export interface HomeContent {
-  hero: Hero;
+  pageHeader: PageHeader;
   introduction: Introduction;
   features: Feature[];
   testimonials: TestimonialSection;

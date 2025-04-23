@@ -1,6 +1,9 @@
 <script setup lang="ts">
-const { t } = useI18n();
+import type { OrderContent } from '~/types';
 
+const { t } = useI18n();
+const { data } = await useAsyncData(() => queryContent<OrderContent>("/order").findOne());
+const order = computed(() => data.value);
 useSeoMeta({
   title: t("order.pageTitle") + " - Samui Kitchen",
   description: t("order.pageDescription")
@@ -8,9 +11,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div v-if="order">
     <PageHeader
-      image="/images/order-header.jpg"
+      :image="order.pageHeader.image"
       :title="t('order.pageTitle')"
       :subtitle="t('order.pageSubtitle')"
     />

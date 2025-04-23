@@ -67,7 +67,7 @@
       </div>
 
       <NuxtLink
-        to="/order"
+        :to="$localePath('/order')"
         class="hover:bg-primary-dark mt-3 block w-full rounded-md bg-primary px-4 py-2 text-center text-white transition-colors"
       >
         {{ items.length > 0 ? t("order.viewOrder") : t("order.startOrdering") }}

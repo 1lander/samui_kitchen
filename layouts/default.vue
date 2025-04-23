@@ -48,7 +48,7 @@
       <div class="container mx-auto">
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <NuxtLink to="/" class="font-medium transition hover:text-secondary">
+            <NuxtLink :to="$localePath('/')" class="font-medium transition hover:text-secondary">
               <NuxtImg src="/img/logo.png" alt="Koh Samui Kitchen Logo" class="h-24" />
             </NuxtLink>
             <div>
@@ -61,7 +61,7 @@
           <nav class="hidden md:block">
             <ul class="flex items-center space-x-6">
               <li v-for="link in links" :key="link.name">
-                <NuxtLink :to="link.path" class="font-medium transition hover:text-secondary">
+                <NuxtLink :to="$localePath(link.path)" class="font-medium transition hover:text-secondary">
                   {{ $t(link.name) }}
                 </NuxtLink>
               </li>
@@ -121,7 +121,7 @@
         <ul class="space-y-4 pt-10 text-primary">
           <li v-for="link in links" :key="link.name">
             <NuxtLink
-              :to="link.path"
+              :to="$localePath(link.path)"
               class="block py-2 font-medium transition hover:text-secondary"
               @click="toggleMobileMenu"
             >

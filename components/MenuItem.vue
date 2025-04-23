@@ -13,6 +13,11 @@
   const handleClick = () => {
     emit("click", props.item);
   };
+
+  const formattedDishChoices = computed(() => {
+    if (!props.item.dishChoices?.length) return "";
+    return "(" + props.item.dishChoices.map((choice) => t(`menu.dishChoices.${choice}`)).join(", ") + ")";
+  });
 </script>
 
 <template>
@@ -25,7 +30,7 @@
         <div class="flex flex-wrap items-center">
           <div class="mr-2 text-xl font-semibold">{{ t(item.name) }}</div>
           <div v-if="item.dishChoices && item.dishChoices.length > 0" class="text-l font-semibold text-gray-500">
-            (<span v-for="(choice, choiceIndex) in item.dishChoices" :key="choiceIndex">{{ t(`menu.dishChoices.${choice}`) }}<template v-if="choiceIndex < item.dishChoices.length - 1">, </template></span>)
+            {{ formattedDishChoices }}
           </div>
         </div>
       </div>

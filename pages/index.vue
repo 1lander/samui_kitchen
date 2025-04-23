@@ -66,8 +66,8 @@ useSeoMeta({
             :key="index"
             class="bg-white p-8 rounded-lg shadow-md text-center"
           >
-            <div class="text-red-600 mb-4">
-              <Icon :name="feature.icon" class="text-4xl" />
+            <div class="text-primary mb-4">
+              <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
             </div>
             <h3 class="text-xl font-bold mb-3">{{ feature.title }}</h3>
             <p class="text-gray-600">{{ feature.description }}</p>

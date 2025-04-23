@@ -15,12 +15,18 @@
   const itemNotes = ref("");
 
   watch(() => props.item, (newItem) => {
-    if (newItem?.dishChoices?.length === 1) {
-      selectedDishChoice.value = newItem.dishChoices[0];
-    } else {
-      selectedDishChoice.value = null;
-    }
+      selectedDishChoice.value = newItem?.dishChoices?.[0] || null;
   }, { immediate: true });
+
+  function resetForm() {
+    selectedDishChoice.value = props.item?.dishChoices?.[0] || null;
+    itemNotes.value = "";
+  }
+
+  function closeModal() {
+    resetForm();
+    emit("close");
+  }
 
   function addToOrder() {
     if (props.item) {
@@ -30,6 +36,7 @@
         dishChoice: selectedDishChoice.value || undefined,
         notes: itemNotes.value || undefined
       });
+      resetForm();
     }
   }
 </script>
@@ -70,7 +77,7 @@
 
       <div class="flex gap-3">
         <button
-          @click="emit('close')"
+          @click="closeModal"
           class="flex-1 rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
         >
           {{ t("common.cancel") }}

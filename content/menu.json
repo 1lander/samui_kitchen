@@ -44,7 +44,8 @@
         {
           "name": "menu.dishes.stirFriedBroccoli",
           "price": 15.0,
-          "description": "menu.dishes.stirFriedBroccoliDesc"
+          "description": "menu.dishes.stirFriedBroccoliDesc",
+          "dishChoices": ["vegan"]
         },
         {
           "name": "menu.dishes.friedRice",
@@ -73,7 +74,8 @@
         {
           "name": "menu.dishes.springRolls",
           "price": 12.0,
-          "description": "menu.dishes.springRollsDesc"
+          "description": "menu.dishes.springRollsDesc",
+          "dishChoices": ["vegan"]
         },
         {
           "name": "menu.dishes.friedBagDumplings",

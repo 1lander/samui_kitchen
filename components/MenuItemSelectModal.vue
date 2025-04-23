@@ -14,6 +14,14 @@
   const selectedDishChoice = ref<string | null>(null);
   const itemNotes = ref("");
 
+  watch(() => props.item, (newItem) => {
+    if (newItem?.dishChoices?.length === 1) {
+      selectedDishChoice.value = newItem.dishChoices[0];
+    } else {
+      selectedDishChoice.value = null;
+    }
+  }, { immediate: true });
+
   function addToOrder() {
     if (props.item) {
       emit("addItem", {

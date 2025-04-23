@@ -1,6 +1,5 @@
 <script setup>
   const { locales, locale, setLocale } = useI18n();
-  const { t } = useI18n();
 
   const flagEmoji = {
     nl: "🇧🇪",
@@ -25,19 +24,19 @@
 
   const links = [
     {
-      name: t("header.home"),
+      name: "header.home",
       path: "/"
     },
     {
-      name: t("header.menu"),
+      name: "header.menu",
       path: "/menu"
     },
     {
-      name: t("header.contact"),
+      name: "header.contact",
       path: "/contact"
     },
     {
-      name: t("header.order"),
+      name: "header.order",
       path: "/order"
     }
   ];

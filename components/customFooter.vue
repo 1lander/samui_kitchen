@@ -12,7 +12,7 @@
           <h3 class="mb-4 text-xl font-semibold text-secondary">
             {{ $t("brand.name") }}
           </h3>
-          <p>{{ $t("footer.brand.tagline") }}</p>
+          <p>{{ $t("brand.tagline") }}</p>
           <div class="mt-4 flex space-x-4">
             <a
               v-for="social in contactData.contactInfo.social"

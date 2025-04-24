@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { storeToRefs } from "pinia";
-  import MenuItemComponent from "~/components/MenuItem.vue";
-  import MenuItemSelectModal from "~/components/MenuItemSelectModal.vue";
+  import { formatPrice } from "~/helpers";
   import { useOrderStore } from "~/stores/order";
   import type { MenuContent, MenuItem, OrderContent } from "~/types";
 
@@ -13,7 +12,6 @@
 
   // Menu item selection state
   const selectedCategory = ref<string | null>(null);
-  const isLoading = ref(false);
   const selectedItem = ref<MenuItem | null>(null);
 
   // Computed
@@ -79,12 +77,9 @@
     <PageHeader :image="order.pageHeader.image" :title="t('order.pageTitle')" :subtitle="t('order.pageSubtitle')" />
 
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-      <!-- Menu Items Column -->
       <div class="order-2 lg:order-1 lg:col-span-2">
-        <h2 class="mb-6 text-2xl font-bold">{{ t("order.selectItems") }}</h2>
-
-        <!-- Category selection -->
-        <div v-if="!isLoading && categories.length > 0" class="mb-6">
+        <h2 class="mb-4 text-2xl font-bold">{{ t("order.selectItems") }}</h2>
+        <div class="mb-4">
           <div class="flex gap-2 overflow-x-auto pb-2">
             <button
               v-for="category in categories"
@@ -102,14 +97,8 @@
           </div>
         </div>
 
-        <!-- Loading state -->
-        <div v-if="isLoading" class="py-12 text-center">
-          <p class="text-lg text-gray-600">{{ t("menu.loading") }}</p>
-        </div>
-
-        <!-- Item selection -->
-        <div v-else-if="allItems.length > 0" class="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <MenuItemComponent
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <MenuItem
             v-for="item in allItems.filter((i) => i.category === selectedCategory)"
             :key="item.name"
             :item="item"
@@ -117,16 +106,9 @@
           />
         </div>
 
-        <!-- No items message -->
-        <div v-else class="py-12 text-center">
-          <p class="text-lg text-gray-600">{{ t("menu.noItems") }}</p>
-        </div>
-
-        <!-- Item customization modal -->
         <MenuItemSelectModal :item="selectedItem" @close="handleCloseModal" @add-item="handleAddItem" />
       </div>
 
-      <!-- Order Summary Column -->
       <div class="order-1 lg:order-2 lg:col-span-1">
         <div class="border border-gray-200 bg-white p-4 shadow-sm md:rounded-lg">
           <h2 class="mb-4 border-b border-gray-200 pb-2 text-xl font-bold">
@@ -171,14 +153,13 @@
                       </button>
                     </div>
 
-                    <div class="min-w-[60px] text-right">€ {{ (item.price * item.quantity).toFixed(2) }}</div>
+                    <div class="min-w-[60px] text-right">{{ formatPrice(item.price * item.quantity) }}</div>
 
                     <button
                       class="ml-2 text-red-500 hover:text-red-700"
                       title="Remove item"
                       @click="removeItem(item.id)"
                     >
-                      <span class="sr-only">Remove</span>
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path
                           fill-rule="evenodd"
@@ -195,11 +176,11 @@
             <div class="mt-4 border-t border-gray-200 pt-4">
               <div class="mb-2 flex justify-between">
                 <span>{{ t("order.subtotal") }}</span>
-                <span>€ {{ subtotal.toFixed(2) }}</span>
+                <span>{{ formatPrice(subtotal) }}</span>
               </div>
               <div class="flex justify-between text-lg font-bold">
                 <span>{{ t("order.total") }}</span>
-                <span>€ {{ total.toFixed(2) }}</span>
+                <span>{{ formatPrice(total) }}</span>
               </div>
             </div>
 

@@ -1,9 +1,10 @@
 <script setup lang="ts">
+  import { formatPrice } from "~/helpers";
   import type { HomeContent, MenuContent } from "~/types";
   const { t } = useI18n();
 
   const { data: homeData } = await useAsyncData(() => queryContent<HomeContent>("/home").findOne());
-  const { data: menuData } = await useAsyncData(() => queryContent<MenuContent>("menu").findOne());
+  const { data: menuData } = await useAsyncData(() => queryContent<MenuContent>("/menu").findOne());
 
   const home = computed(() => homeData.value);
   const popularDishes = computed(() =>
@@ -72,7 +73,7 @@
             <div class="p-6">
               <div class="mb-2 flex items-center justify-between">
                 <h3 class="text-xl font-bold">{{ t(dish.name) }}</h3>
-                <span class="font-semibold text-primary">{{ dish.price.toFixed(2) }} €</span>
+                <span class="font-semibold text-primary">{{ formatPrice(dish.price) }}</span>
               </div>
               <p v-if="dish.description" class="text-gray-600">
                 {{ t(dish.description) }}
@@ -97,27 +98,6 @@
           </div>
         </div>
       </section>
-
-      <!-- CTA Section -->
-      <!-- <section class="py-16 bg-red-600 text-white">
-      <div class="max-w-4xl mx-auto text-center px-4">
-        <h2 class="text-3xl font-bold mb-3">{{ home.cta.title }}</h2>
-        <p class="text-xl mb-8">{{ home.cta.subtitle }}</p>
-        <div class="flex flex-wrap justify-center gap-4">
-          <NuxtLink 
-            v-for="(button, index) in home.cta.buttons" 
-            :key="index" 
-            :to="button.link" 
-            :class="[
-              'px-8 py-3 rounded-full text-lg font-medium transition',
-              button.primary ? 'bg-white text-red-600 hover:bg-gray-100' : 'border-2 border-white hover:bg-white hover:text-red-600'
-            ]"
-          >
-            {{ button.text }}
-          </NuxtLink>
-        </div>
-      </div>
-    </section> -->
     </div>
   </div>
 </template>

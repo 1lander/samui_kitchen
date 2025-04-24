@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { formatPrice } from "~/helpers";
   import type { MenuItem } from "~/types";
   const { t } = useI18n();
 
@@ -35,7 +36,7 @@
         </div>
       </div>
       <div class="whitespace-nowrap text-right">
-        <span class="text-lg font-medium text-secondary">€ {{ item.price.toFixed(2) }}</span>
+        <span class="text-lg font-medium text-secondary">{{ formatPrice(item.price) }}</span>
       </div>
     </div>
     <p v-if="item.description" class="mt-1 text-secondary">

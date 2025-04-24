@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { storeToRefs } from "pinia";
+  import { formatPrice } from "~/helpers";
   import { useOrderStore } from "~/stores/order";
 
   const orderStore = useOrderStore();
@@ -49,7 +50,7 @@
                   {{ t(`menu.dishChoices.${item.dishChoice}`) }}
                 </span>
               </div>
-              <div class="text-gray-700">€ {{ (item.price * item.quantity).toFixed(2) }}</div>
+              <div class="text-gray-700">{{ formatPrice(item.price * item.quantity) }}</div>
             </li>
 
             <li v-if="items.length > 3" class="py-2 text-center text-sm italic text-gray-500">
@@ -61,7 +62,7 @@
         <div class="mt-3 border-t border-gray-200 pt-2">
           <div class="mb-2 flex justify-between">
             <span class="font-medium">{{ t("order.subtotal") }}</span>
-            <span>€ {{ subtotal.toFixed(2) }}</span>
+            <span>{{ formatPrice(subtotal) }}</span>
           </div>
         </div>
       </div>

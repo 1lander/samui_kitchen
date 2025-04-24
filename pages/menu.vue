@@ -6,7 +6,7 @@
   const { t } = useI18n();
   const orderStore = useOrderStore();
 
-  const { data } = await useAsyncData(() => queryContent<MenuContent>("menu").findOne());
+  const { data } = await useAsyncData(() => queryContent<MenuContent>("/menu").findOne());
   const menu = computed(() => data.value);
 
   const selectedItem = ref<MenuItem | null>(null);

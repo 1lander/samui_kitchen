@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import { useOrderStore } from "~/stores/order";
-  import type { MenuContent, MenuItem } from "~/types";
+  import type { MenuContent, MenuItem, OrderItem } from "~/types";
 
   const { t } = useI18n();
   const orderStore = useOrderStore();
@@ -9,27 +9,19 @@
   const { data } = await useAsyncData(() => queryContent<MenuContent>("/menu").findOne());
   const menu = computed(() => data.value);
 
-  const selectedItem = ref<MenuItem | null>(null);
+  const selectedMenuItem = ref<MenuItem | null>(null);
 
-  function selectItem(item: MenuItem) {
-    selectedItem.value = {
-      name: item.name,
-      price: item.price,
-      dishChoices: item.dishChoices
-    };
+  function handleItemClick(item: MenuItem) {
+    selectedMenuItem.value = item;
   }
 
-  function handleAddItem(itemData: { name: string; price: number; dishChoice?: string; notes?: string }) {
-    orderStore.addItem(
-      {
-        name: itemData.name,
-        price: itemData.price
-      },
-      itemData.dishChoice,
-      itemData.notes
-    );
+  function handleCloseModal() {
+    selectedMenuItem.value = null;
+  }
 
-    selectedItem.value = null;
+  function handleAddItem(item: OrderItem) {
+    orderStore.addItem(item);
+    selectedMenuItem.value = null;
   }
 
   useSeoMeta({
@@ -57,11 +49,11 @@
             v-for="(item, itemIndex) in category.items"
             :key="itemIndex"
             :item="item"
-            @click="selectItem(item)"
+            @click="handleItemClick(item)"
           />
         </div>
       </div>
     </div>
-    <MenuItemSelectModal :item="selectedItem" @close="selectedItem = null" @add-item="handleAddItem" />
+    <MenuItemSelectModal :item="selectedMenuItem" @close="handleCloseModal" @add-item="handleAddItem" />
   </div>
 </template>

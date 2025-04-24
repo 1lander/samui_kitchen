@@ -2,36 +2,21 @@
   import { storeToRefs } from "pinia";
   import { formatPrice } from "~/helpers";
   import { useOrderStore } from "~/stores/order";
-  import type { MenuContent, MenuItem, OrderContent } from "~/types";
+  import type { MenuContent, MenuItem, OrderContent, OrderItem } from "~/types";
 
   const { t } = useI18n();
   const { data: orderData } = await useAsyncData(() => queryContent<OrderContent>("/order").findOne());
   const { data: menuData } = await useAsyncData(() => queryContent<MenuContent>("/menu").findOne());
+
   const order = computed(() => orderData.value);
-  const menu = computed(() => menuData.value);
+  const categories = computed(() => menuData.value?.categories);
 
-  // Menu item selection state
   const selectedCategory = ref<string | null>(null);
-  const selectedItem = ref<MenuItem | null>(null);
+  const selectedMenuItem = ref<MenuItem | null>(null);
 
-  // Computed
-  const categories = computed(() => menu.value?.categories || []);
-
-  const allItems = computed(() => {
-    if (!menu.value) return [];
-
-    return menu.value.categories.flatMap((category) =>
-      category.items.map((item) => ({
-        ...item,
-        category: category.name
-      }))
-    );
-  });
-
-  // Set the first category as selected by default when menu loads
   watchEffect(() => {
-    if (menu.value?.categories && menu.value.categories.length > 0 && !selectedCategory.value) {
-      selectedCategory.value = menu.value.categories[0].name;
+    if (categories.value?.length && !selectedCategory.value) {
+      selectedCategory.value = categories.value[0].name;
     }
   });
 
@@ -40,26 +25,16 @@
   }
 
   function handleItemClick(item: MenuItem) {
-    selectedItem.value = item;
+    selectedMenuItem.value = item;
   }
 
   function handleCloseModal() {
-    selectedItem.value = null;
+    selectedMenuItem.value = null;
   }
 
-  function handleAddItem({
-    name,
-    price,
-    dishChoice,
-    notes
-  }: {
-    name: string;
-    price: number;
-    dishChoice?: string;
-    notes?: string;
-  }) {
-    orderStore.addItem({ name, price }, dishChoice, notes);
-    selectedItem.value = null;
+  function handleAddItem(item: OrderItem) {
+    orderStore.addItem(item);
+    selectedMenuItem.value = null;
   }
 
   const orderStore = useOrderStore();
@@ -99,14 +74,14 @@
 
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
           <MenuItem
-            v-for="item in allItems.filter((i) => i.category === selectedCategory)"
+            v-for="item in categories?.find(({ name }) => name === selectedCategory)?.items"
             :key="item.name"
             :item="item"
             @click="handleItemClick"
           />
         </div>
 
-        <MenuItemSelectModal :item="selectedItem" @close="handleCloseModal" @add-item="handleAddItem" />
+        <MenuItemSelectModal :item="selectedMenuItem" @close="handleCloseModal" @add-item="handleAddItem" />
       </div>
 
       <div class="order-1 lg:order-2 lg:col-span-1">

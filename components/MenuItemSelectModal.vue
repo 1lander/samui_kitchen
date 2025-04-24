@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import type { MenuItem } from "~/types";
+  import type { DishChoice, MenuItem, OrderItem } from "~/types";
   const { t } = useI18n();
 
   const props = defineProps<{
@@ -8,10 +8,10 @@
 
   const emit = defineEmits<{
     close: [];
-    addItem: [{ name: string; price: number; dishChoice?: string; notes?: string }];
+    addItem: [OrderItem];
   }>();
 
-  const selectedDishChoice = ref<string | null>(null);
+  const selectedDishChoice = ref<DishChoice | null>(null);
   const itemNotes = ref("");
 
   watch(

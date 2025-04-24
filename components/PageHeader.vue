@@ -1,18 +1,9 @@
-<script setup>
-  defineProps({
-    image: {
-      type: String,
-      required: true
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    subtitle: {
-      type: String,
-      default: ""
-    }
-  });
+<script setup lang="ts">
+  defineProps<{
+    image: string;
+    title: string;
+    subtitle?: string;
+  }>();
 </script>
 
 <template>

@@ -68,8 +68,11 @@
         </div>
       </div>
 
+      <div v-if="item.image" class="mb-4">
+        <NuxtImg :src="item.image" :alt="t(item.name)" class="h-48 w-full rounded-lg object-cover" />
+      </div>
+
       <div v-if="!item.forbidSpecialRequests" class="mb-6">
-        <label for="notes" class="mb-2 block font-medium">{{ t("order.specialRequests") }}</label>
         <textarea
           id="notes"
           v-model="itemNotes"

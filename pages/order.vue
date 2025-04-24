@@ -51,7 +51,7 @@
   <div v-if="order">
     <PageHeader :image="order.pageHeader.image" :title="t('order.pageTitle')" :subtitle="t('order.pageSubtitle')" />
 
-    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 lg:grid-cols-3">
       <div class="order-2 lg:order-1 lg:col-span-2">
         <h2 class="mb-4 text-2xl font-bold">{{ t("order.selectItems") }}</h2>
         <div class="mb-4">

@@ -8,18 +8,18 @@
   },
   "features": [
     {
-      "title": "Authentic Recipes",
-      "description": "Our dishes are prepared using traditional Thai recipes passed down through generations.",
+      "title": "home.features.authenticRecipes.title",
+      "description": "home.features.authenticRecipes.description",
       "icon": "utensils"
     },
     {
-      "title": "Fresh Ingredients",
-      "description": "We source the freshest ingredients daily to ensure quality and authentic flavors in every dish.",
+      "title": "home.features.freshIngredients.title",
+      "description": "home.features.freshIngredients.description",
       "icon": "leaf"
     },
     {
-      "title": "Fast Delivery",
-      "description": "Enjoy our delicious meals in the comfort of your home with our quick and reliable delivery service.",
+      "title": "home.features.fastDelivery.title",
+      "description": "home.features.fastDelivery.description",
       "icon": "truck"
     }
   ],

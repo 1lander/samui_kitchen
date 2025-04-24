@@ -42,6 +42,9 @@
       </section>
 
       <section>
+        <h2 class="mb-8 text-center text-3xl font-bold">
+          {{ t("home.features.title") }}
+        </h2>
         <div class="grid gap-8 md:grid-cols-3">
           <div
             v-for="(feature, index) in home.features"
@@ -51,17 +54,14 @@
             <div class="mb-4 text-primary">
               <Icon :name="`mdi:${feature.icon}`" class="text-4xl" />
             </div>
-            <h3 class="mb-3 text-xl font-bold">{{ feature.title }}</h3>
-            <p class="text-gray-600">{{ feature.description }}</p>
+            <h3 class="mb-3 text-xl font-bold">{{ t(feature.title) }}</h3>
+            <p class="text-gray-600">{{ t(feature.description) }}</p>
           </div>
         </div>
       </section>
 
       <section>
-        <div class="mb-8 text-center">
-          <h2 class="mb-2 text-3xl font-bold">{{ t("home.menu.title") }}</h2>
-          <p class="text-lg text-gray-600">{{ t("home.menu.subtitle") }}</p>
-        </div>
+        <h2 class="mb-8 text-center text-3xl font-bold">{{ t("home.menu.title") }}</h2>
         <div class="grid gap-8 md:grid-cols-3">
           <div
             v-for="(dish, index) in popularDishes"

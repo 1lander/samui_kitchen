@@ -194,16 +194,10 @@
               :options="field.options"
             />
 
-            <div>
-              <button
-                type="submit"
-                class="hover:bg-primary-dark w-full rounded-md bg-primary px-4 py-2 text-white transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
-                :disabled="isSubmitting"
-              >
-                <span v-if="isSubmitting">Sending...</span>
-                <span v-else>{{ t("contact.form.submit") }}</span>
-              </button>
-            </div>
+            <Button variant="primary" type="submit" :disabled="isSubmitting" full-width>
+              <span v-if="isSubmitting">Sending...</span>
+              <span v-else>{{ t("contact.form.submit") }}</span>
+            </Button>
           </form>
         </div>
       </div>

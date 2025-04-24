@@ -80,15 +80,8 @@
       </div>
 
       <div class="flex gap-3">
-        <button
-          class="flex-1 rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
-          @click="closeModal"
-        >
-          {{ t("common.cancel") }}
-        </button>
-        <button class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white" @click="addToOrder">
-          {{ t("order.addToOrder") }}
-        </button>
+        <Button variant="secondary" @click="closeModal">{{ t("common.cancel") }}</Button>
+        <Button variant="primary" @click="addToOrder">{{ t("order.addToOrder") }}</Button>
       </div>
     </div>
   </div>

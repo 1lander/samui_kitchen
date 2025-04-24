@@ -160,15 +160,8 @@
             </div>
 
             <div class="mt-6 flex gap-4">
-              <button
-                class="flex-1 rounded-md border border-gray-300 px-4 py-2 text-gray-700 hover:bg-gray-100"
-                @click="clearOrder"
-              >
-                {{ t("order.clearOrder") }}
-              </button>
-              <button class="hover:bg-primary-dark flex-1 rounded-md bg-primary px-4 py-2 text-white">
-                {{ t("order.checkout") }}
-              </button>
+              <Button variant="secondary" @click="clearOrder">{{ t("order.clearOrder") }}</Button>
+              <Button variant="primary">{{ t("order.checkout") }}</Button>
             </div>
           </div>
         </div>

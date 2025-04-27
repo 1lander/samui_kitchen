@@ -1,6 +1,7 @@
 <script setup lang="ts">
-  import type { ContactContent } from "~/types";
+  import type { ContactContent, ContactFormData } from "~/types";
   const { t } = useI18n();
+  const { $mail } = useNuxtApp();
 
   const { data } = await useAsyncData(() => queryContent<ContactContent>("/contact").findOne());
 
@@ -11,15 +12,7 @@
     description: t("contact.pageSubtitle")
   });
 
-  interface FormData {
-    [key: string]: string;
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-  }
-
-  const formData = ref<FormData>({
+  const formData = ref<ContactFormData>({
     name: "",
     email: "",
     subject: "General Inquiry",
@@ -35,9 +28,15 @@
     errorMessage.value = "";
 
     try {
-      // Here you would send the form data to your backend or API
-      // For demonstration, we'll simulate a successful submission after a delay
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await $mail.send({
+        from: formData.value.name + " <" + formData.value.email + ">",
+        subject: formData.value.subject,
+        text: formData.value.message,
+        html: `<p>${formData.value.message.replace(/\n/g, "<br>")}</p>
+               <hr>
+               <p><strong>From:</strong> ${formData.value.name}</p>
+               <p><strong>Email:</strong> ${formData.value.email}</p>`
+      });
 
       // Clear form fields on success
       formData.value = {
@@ -187,7 +186,7 @@
               v-for="field in contact.formFields"
               :id="field.name"
               :key="field.name"
-              v-model="formData[field.name]"
+              v-model="formData[field.name as keyof ContactFormData]"
               :type="field.type"
               :label="t(field.label)"
               :required="field.required"

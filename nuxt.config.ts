@@ -11,7 +11,23 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
     "@nuxtjs/leaflet",
-    "@pinia/nuxt"
+    "@pinia/nuxt",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: process.env.MAIL_RECIPIENT || "test@example.com"
+        },
+        smtp: {
+          host: process.env.SMTP_HOST,
+          port: process.env.SMTP_PORT,
+          auth: {
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASSWORD
+          }
+        }
+      }
+    ]
   ],
   i18n: {
     defaultLocale: "nl",

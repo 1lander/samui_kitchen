@@ -41,3 +41,10 @@ export interface ContactContent {
   formFields: FormField[];
   location: MapLocation;
 }
+
+export interface ContactFormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}

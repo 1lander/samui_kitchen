@@ -197,7 +197,8 @@
             <div class="mt-6 flex gap-4">
               <Button variant="secondary" @click="clearOrder">{{ t("order.clearOrder") }}</Button>
               <Button variant="primary" :loading="isProcessing" @click="handleCheckout">
-                {{ isProcessing ? t("order.processing") : t("order.checkout") }}
+                <span v-if="isProcessing">{{ t("common.processing") }}</span>
+                <span v-else>{{ t("order.checkout") }}</span>
               </Button>
             </div>
           </div>

@@ -193,8 +193,8 @@
               :options="field.options"
             />
 
-            <Button variant="primary" type="submit" :disabled="isSubmitting" full-width>
-              <span v-if="isSubmitting">Sending...</span>
+            <Button variant="primary" type="submit" :loading="isSubmitting" full-width>
+              <span v-if="isSubmitting">{{ t("common.processing") }}</span>
               <span v-else>{{ t("contact.form.submit") }}</span>
             </Button>
           </form>

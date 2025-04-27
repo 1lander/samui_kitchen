@@ -140,7 +140,6 @@
     "notesPlaceholder": "คำขอพิเศษสำหรับอาหารนี้",
     "selectItems": "เลือกอาหาร",
     "andMoreItems": "+ {count} อาหารที่เหลือ",
-    "processing": "กำลังดำเนินการ...",
     "deliveryOption": {
       "title": "ตัวเลือกการจัดส่ง",
       "pickup": "รับสินค้า",
@@ -157,7 +156,8 @@
   "common": {
     "cancel": "ยกเลิก",
     "save": "บันทึก",
-    "remove": "ลบ"
+    "remove": "ลบ",
+    "processing": "กำลังดำเนินการ..."
   },
   "footer": {
     "hours": {

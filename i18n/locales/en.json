@@ -141,7 +141,6 @@
     "notesPlaceholder": "Any special requests for this dish?",
     "selectItems": "Select Menu Items",
     "andMoreItems": "+ {count} more",
-    "processing": "Processing...",
     "deliveryOption": {
       "title": "Delivery Option",
       "pickup": "Pickup",
@@ -158,7 +157,8 @@
   "common": {
     "cancel": "Cancel",
     "save": "Save",
-    "remove": "Remove"
+    "remove": "Remove",
+    "processing": "Processing..."
   },
   "footer": {
     "hours": {

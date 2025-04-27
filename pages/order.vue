@@ -45,6 +45,19 @@
     title: t("order.pageTitle") + " - Samui Kitchen",
     description: t("order.pageSubtitle")
   });
+
+  const handleCheckout = async () => {
+    const response = await $fetch("/api/payment", {
+      method: "POST",
+      body: {
+        items: items.value,
+        subtotal: subtotal.value,
+        totalItems: totalItems.value,
+        total: total.value
+      }
+    });
+    console.log(response);
+  };
 </script>
 
 <template>
@@ -161,7 +174,7 @@
 
             <div class="mt-6 flex gap-4">
               <Button variant="secondary" @click="clearOrder">{{ t("order.clearOrder") }}</Button>
-              <Button variant="primary">{{ t("order.checkout") }}</Button>
+              <Button variant="primary" @click="handleCheckout">{{ t("order.checkout") }}</Button>
             </div>
           </div>
         </div>

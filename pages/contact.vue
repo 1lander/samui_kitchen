@@ -28,9 +28,10 @@
     errorMessage.value = "";
 
     try {
+      // @ts-expect-error not typed check docs for api
       await $mail.send({
         from: formData.value.name + " <" + formData.value.email + ">",
-        subject: formData.value.subject,
+        subject: `[Samui Kitchen] ${formData.value.subject}`,
         text: formData.value.message,
         html: `<p>${formData.value.message.replace(/\n/g, "<br>")}</p>
                <hr>

@@ -8,7 +8,7 @@
   const contact = computed(() => data.value);
 
   useSeoMeta({
-    title: t("contact.pageTitle") + " - Samui Kitchen",
+    title: t("contact.pageTitle") + " - Koh Samui kitchen",
     description: t("contact.pageSubtitle")
   });
 
@@ -31,7 +31,7 @@
       // @ts-expect-error not typed check docs for api
       await $mail.send({
         from: formData.value.name + " <" + formData.value.email + ">",
-        subject: `[Samui Kitchen] ${formData.value.subject}`,
+        subject: `[Koh Samui kitchen] ${formData.value.subject}`,
         text: formData.value.message,
         html: `<p>${formData.value.message.replace(/\n/g, "<br>")}</p>
                <hr>

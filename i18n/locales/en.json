@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Samui's Kitchen",
+    "name": "Koh Samui kitchen",
     "tagline": "Bringing the authentic flavors of Thailand to your doorstep."
   },
   "header": {
@@ -10,12 +10,12 @@
     "order": "Order"
   },
   "home": {
-    "pageTitle": "Welcome to Samui's Kitchen",
+    "pageTitle": "Welcome to Koh Samui kitchen",
     "pageSubtitle": "Experience the authentic flavors of Thailand in the heart of Antwerp",
     "menuButton": "View Menu",
     "introduction": {
-      "title": "Welcome to Samui Kitchen",
-      "content": "At Samui Kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui."
+      "title": "Welcome to Koh Samui kitchen",
+      "content": "At Koh Samui kitchen, we bring the vibrant and authentic flavors of Thailand to your table. Our chefs use traditional recipes and fresh ingredients to create dishes that transport you straight to the streets of Bangkok and the beaches of Koh Samui."
     },
     "menu": {
       "title": "Popular Dishes"

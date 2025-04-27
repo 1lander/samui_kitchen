@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Samui's Kitchen",
+    "name": "Koh Samui kitchen",
     "tagline": "นำรสชาติแท้ของอาหารไทยถึงบ้านคุณ"
   },
   "header": {
@@ -10,12 +10,12 @@
     "order": "สั่งอาหาร"
   },
   "home": {
-    "pageTitle": "ยินดีต้อนรับเข้าสู่ Samui's Kitchen",
+    "pageTitle": "ยินดีต้อนรับเข้าสู่ Koh Samui kitchen",
     "pageSubtitle": "สัมผัสรสชาติแท้ของอาหารไทยในหัวใจของกรุงเทพ",
     "menuButton": "ดูเมนู",
     "introduction": {
-      "title": "ยินดีต้อนรับเข้าสู่ Samui Kitchen",
-      "content": "ที่ Samui Kitchen เราเปิดร้านอาหารไทยที่มีรสชาติที่สดใหม่และรสชาติที่คุ้มครองคุณครบทุกคน"
+      "title": "ยินดีต้อนรับเข้าสู่ Koh Samui kitchen",
+      "content": "ที่ Koh Samui kitchen เราเปิดร้านอาหารไทยที่มีรสชาติที่สดใหม่และรสชาติที่คุ้มครองคุณครบทุกคน"
     },
     "menu": {
       "title": "อาหารที่คุณควรลอง"

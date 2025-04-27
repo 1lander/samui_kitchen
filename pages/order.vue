@@ -44,7 +44,7 @@
   const { removeItem, updateItemQuantity, clearOrder } = orderStore;
 
   useSeoMeta({
-    title: t("order.pageTitle") + " - Samui Kitchen",
+    title: t("order.pageTitle") + " - Koh Samui kitchen",
     description: t("order.pageSubtitle")
   });
 

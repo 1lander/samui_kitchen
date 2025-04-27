@@ -49,7 +49,7 @@
         <div class="flex items-center justify-between">
           <div class="flex items-center">
             <NuxtLink :to="$localePath('/')" class="font-medium transition hover:text-secondary">
-              <NuxtImg src="/img/logo.png" alt="Koh Samui Kitchen Logo" class="h-24" />
+              <NuxtImg src="/img/logo.png" alt="Koh Koh Samui kitchen Logo" class="h-24" />
             </NuxtLink>
             <div>
               <h1 class="text-2xl font-bold leading-none text-primary md:text-3xl">

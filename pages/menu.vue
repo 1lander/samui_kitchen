@@ -25,7 +25,7 @@
   }
 
   useSeoMeta({
-    title: t("menu.pageTitle") + " - Samui Kitchen",
+    title: t("menu.pageTitle") + " - Koh Samui kitchen",
     description: t("menu.pageSubtitle")
   });
 </script>

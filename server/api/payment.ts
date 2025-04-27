@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
         value: body.total.toString(),
         currency: "EUR"
       },
-      description: "Samui Kitchen Order",
+      description: "Koh Samui kitchen Order",
       redirectUrl: `${config.public.siteUrl}/order-confirmation`,
       webhookUrl: `${config.public.siteUrl}/api/payment-webhook`
     });

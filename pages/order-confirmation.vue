@@ -55,7 +55,7 @@
 
   // SEO
   useSeoMeta({
-    title: t("order.confirmationTitle") + " - Samui Kitchen",
+    title: t("order.confirmationTitle") + " - Koh Samui kitchen",
     description: t("order.confirmationDescription")
   });
 </script>

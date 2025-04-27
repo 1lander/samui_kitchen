@@ -1,6 +1,6 @@
 {
   "brand": {
-    "name": "Samui's Kitchen",
+    "name": "Koh Samui kitchen",
     "tagline": "Authentieke Thaise smaken bij u aan huis."
   },
   "header": {
@@ -10,12 +10,12 @@
     "order": "Bestel"
   },
   "home": {
-    "pageTitle": "Welkom bij Samui's Kitchen",
+    "pageTitle": "Welkom bij Koh Samui kitchen",
     "pageSubtitle": "Ervaren de authentieke smaken van Thailand in het hart van Antwerpen",
     "menuButton": "Bekijk Menu",
     "introduction": {
-      "title": "Welkom bij Samui Kitchen",
-      "content": "Bij Samui Kitchen brengen we de echte smaken van Thailand naar je tafel. Onze chefs gebruiken traditionele recepten en verse ingrediënten om gerechten te maken die je direct naar Bangkok en Koh Samui brengen."
+      "title": "Welkom bij Koh Samui kitchen",
+      "content": "Bij Koh Samui kitchen brengen we de echte smaken van Thailand naar je tafel. Onze chefs gebruiken traditionele recepten en verse ingrediënten om gerechten te maken die je direct naar Bangkok en Koh Samui brengen."
     },
     "menu": {
       "title": "Populair Gerecht"

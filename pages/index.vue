@@ -12,7 +12,7 @@
   );
 
   useSeoMeta({
-    title: t("home.pageTitle") + " - Samui Kitchen",
+    title: t("home.pageTitle") + " - Koh Samui kitchen",
     description: t("home.pageSubtitle")
   });
 </script>
@@ -36,7 +36,7 @@
           </div>
           <NuxtImg
             :src="home.introduction.image"
-            alt="Samui Kitchen restaurant"
+            alt="Koh Samui kitchen restaurant"
             class="h-auto w-full shadow-xl md:rounded-lg"
           />
         </div>

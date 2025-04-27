@@ -13,6 +13,8 @@
 
   const selectedCategory = ref<string | null>(null);
   const selectedMenuItem = ref<MenuItem | null>(null);
+  const paymentError = ref<string | null>(null);
+  const isProcessing = ref(false);
 
   watchEffect(() => {
     if (categories.value?.length && !selectedCategory.value) {
@@ -47,16 +49,32 @@
   });
 
   const handleCheckout = async () => {
-    const response = await $fetch("/api/payment", {
-      method: "POST",
-      body: {
-        items: items.value,
-        subtotal: subtotal.value,
-        totalItems: totalItems.value,
-        total: total.value
+    try {
+      paymentError.value = null;
+      isProcessing.value = true;
+
+      const response = await $fetch("/api/payment", {
+        method: "POST",
+        body: {
+          items: items.value,
+          subtotal: subtotal.value,
+          totalItems: totalItems.value,
+          total: total.value
+        }
+      });
+
+      // Redirect to payment URL if available
+      if (response._links?.checkout?.href) {
+        navigateTo(response._links.checkout.href, { external: true });
+      } else {
+        paymentError.value = t("order.paymentLinkError");
       }
-    });
-    console.log(response);
+    } catch (error: any) {
+      paymentError.value = error.message;
+      console.error("Payment error:", error);
+    } finally {
+      isProcessing.value = false;
+    }
   };
 </script>
 
@@ -172,9 +190,15 @@
               </div>
             </div>
 
+            <div v-if="paymentError" class="mt-4 rounded-md bg-red-50 p-3 text-red-600">
+              {{ paymentError }}
+            </div>
+
             <div class="mt-6 flex gap-4">
               <Button variant="secondary" @click="clearOrder">{{ t("order.clearOrder") }}</Button>
-              <Button variant="primary" @click="handleCheckout">{{ t("order.checkout") }}</Button>
+              <Button variant="primary" :loading="isProcessing" @click="handleCheckout">
+                {{ isProcessing ? t("order.processing") : t("order.checkout") }}
+              </Button>
             </div>
           </div>
         </div>

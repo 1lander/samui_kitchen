@@ -141,6 +141,7 @@
     "notesPlaceholder": "Speciale wensen voor dit gerecht?",
     "selectItems": "Selecteer gerechten",
     "andMoreItems": "+ {count} meer",
+    "processing": "Bezig met verwerken...",
     "deliveryOption": {
       "title": "Leveringsoptie",
       "pickup": "Afhalen",
